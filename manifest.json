@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "Chromium AirPlay",
+  "description": "Adds an AirPlay button to video and audio elements on the page.",
+  "version": "1.0",
+  "author": "Jonathan Russ",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "background",
+    "contextMenus",
+    "webRequest"
+  ],
+  "host_permissions": ["*://*/*"],
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["content.js"],
+      "css": ["main.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["airPlayButton.html"],
+      "matches": ["https://*.youtube.com/*"]
+    }
+  ]
+}
