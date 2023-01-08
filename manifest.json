@@ -10,21 +10,25 @@
     "activeTab",
     "background",
     "contextMenus",
-    "webRequest"
+    "webRequest",
+    "declarativeNetRequest"
   ],
   "host_permissions": ["*://*/*"],
   "content_scripts": [
     {
       "run_at": "document_start",
-      "matches": ["https://*.youtube.com/*"],
+      "matches": ["*://*.youtube.com/*"],
       "js": ["content.js"],
       "css": ["main.css"]
     }
   ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "web_accessible_resources": [
     {
       "resources": ["airPlayButton.html"],
-      "matches": ["https://*.youtube.com/*"]
+      "matches": ["*://*.youtube.com/*"]
     }
   ]
 }

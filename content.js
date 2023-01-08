@@ -1,18 +1,11 @@
-// if (!window.WebKitPlaybackTargetAvailabilityEvent) {
-//   return;
-// }
-
-// add event listener when the dom is loaded
 document.addEventListener('DOMContentLoaded', function () {
   const remoteButton = document.querySelector('.ytp-remote-button.ytp-button');
   console.log(remoteButton);
 
   // Fetch the airPlayButton element from the airPlayButton.html file
+  const airPlayButtonUrl = chrome.extension.getURL('button.html');
   const xhr = new XMLHttpRequest();
-  xhr.open(
-    'GET',
-    'chrome-extension://lgnlhgebnkkjbhhajmecoooodmjblddj/airPlayButton.html'
-  );
+  xhr.open('GET', airPlayButtonUrl);
   xhr.onload = function () {
     if (xhr.status === 200) {
       // Parse the HTML string and get the airPlayButton element
@@ -25,22 +18,24 @@ document.addEventListener('DOMContentLoaded', function () {
       // Add the airPlayButton element to the div element
       remoteButton.insertAdjacentElement('afterend', airPlayButton);
 
-      // Add an event listener to the airPlayButton to show the AirPlay airPlayButton when clicked
-      // source.addEventListener(
-      //   'webkitplaybacktargetavailabilitychanged',
-      //   function (event) {
-      //     switch (event.availability) {
-      //       case 'available':
-      //         airPlayButton.hidden = false;
-      //         airPlayButton.disabled = false;
-      //         break;
-      //       case 'not-available':
-      //         airPlayButton.hidden = true;
-      //         airPlayButton.disabled = true;
-      //         break;
-      //     }
-      //   }
-      // );
+      airPlayButton.addEventListener('click', function () {
+        const videoId = getYouTubeVideoId();
+        const quality = 'best';
+        chrome.extension.sendMessage({
+          action: 'playVideo',
+          videoId: videoId,
+          quality: quality,
+        });
+        function getYouTubeVideoId() {
+          // Get the YouTube video ID from the URL
+          const regex = /v=([^&#]*)/;
+          const match = regex.exec(window.location.search);
+          if (match && match.length > 1) {
+            return match[1];
+          }
+          return null;
+        }
+      });
     }
   };
   xhr.send();
