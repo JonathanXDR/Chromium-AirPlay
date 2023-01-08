@@ -3,9 +3,11 @@ document.addEventListener('DOMContentLoaded', function () {
   console.log(remoteButton);
 
   // Fetch the airPlayButton element from the airPlayButton.html file
-  const airPlayButtonUrl = chrome.extension.getURL('button.html');
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', airPlayButtonUrl);
+  xhr.open(
+    'GET',
+    'chrome-extension://lgnlhgebnkkjbhhajmecoooodmjblddj/button.html'
+  );
   xhr.onload = function () {
     if (xhr.status === 200) {
       // Parse the HTML string and get the airPlayButton element
