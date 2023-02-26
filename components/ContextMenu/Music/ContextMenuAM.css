@@ -1361,7 +1361,7 @@ html[dir='rtl'] .context-menu-item.svelte-1q0pfxk .icon.svelte-1q0pfxk {
 @media only screen and (max-width: 483px) {
   .reposition-on-mobile.svelte-xzzpfu {
     bottom: var(--bodyGutter, 25px) !important;
-    max-height: calc(100vh - var(--bodyGutter, $body-gutter-xs) * 2);
+    max-height: calc(100vh - var(--bodyGutter, --body-gutter-xs) * 2);
     position: fixed;
     top: auto !important;
     transition: transform 0.2s ease;
@@ -1413,7 +1413,7 @@ html[dir='rtl'] .context-menu-item.svelte-1q0pfxk .icon.svelte-1q0pfxk {
 .context-menu-container.svelte-xzzpfu {
   position: relative;
 }
-@media only screen and (min-width: 484px) {
+/* @media only screen and (min-width: 484px) {
   .context-menu.render-left.svelte-xzzpfu {
     transform: translate(-85%);
   }
@@ -1438,7 +1438,7 @@ html[dir='rtl'] .context-menu-item.svelte-1q0pfxk .icon.svelte-1q0pfxk {
   .context-menu.render-right.svelte-xzzpfu:after {
     top: -8px;
   }
-}
+} */
 @supports (-webkit-box-reflect: initial) {
   .artwork-component--top-rounded-secondary.svelte-sgtohc.svelte-sgtohc {
     -webkit-box-reflect: below;
