@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
   const xhr = new XMLHttpRequest();
   xhr.open(
     'GET',
-    'chrome-extension://lgnlhgebnkkjbhhajmecoooodmjblddj/button.html'
+    'chrome-extension://lgnlhgebnkkjbhhajmecoooodmjblddj/components/Button.html'
   );
   xhr.onload = function () {
     if (xhr.status === 200) {

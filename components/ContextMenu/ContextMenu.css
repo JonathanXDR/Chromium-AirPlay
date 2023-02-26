@@ -1,0 +1,2635 @@
+@charset "UTF-8";
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  box-sizing: border-box;
+}
+body,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+th {
+  font-size: 1em;
+  font-style: normal;
+  font-weight: 400;
+}
+th {
+  text-align: left;
+}
+:global(html[dir='rtl']) th {
+  text-align: right;
+}
+button {
+  background: 0 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: inherit;
+  vertical-align: inherit;
+}
+button:disabled {
+  cursor: default;
+}
+:focus {
+  outline: 4px solid rgba(0, 125, 250, 0.6);
+}
+:focus[data-focus-method='mouse']:not(input):not(textarea):not(select),
+:focus[data-focus-method='touch']:not(input):not(textarea):not(select),
+:focus[type='range'][data-focus-method='mouse'],
+:focus[type='range'][data-focus-method='touch'] {
+  outline: 0;
+}
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+*,
+:after,
+:before {
+  box-sizing: inherit;
+}
+a,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+html,
+li,
+th,
+ul {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+[contenteditable] {
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  -ms-user-select: auto !important;
+  user-select: auto !important;
+}
+ul {
+  list-style-type: none;
+}
+svg {
+  pointer-events: none;
+}
+:root {
+  --systemRed: #ff3b30;
+  --systemRed-vibrant: #f53126;
+  --systemRed-default_IC: #d70015;
+  --systemRed-vibrant_IC: #c20618;
+  --systemOrange: #ff9500;
+  --systemOrange-vibrant: #f58b00;
+  --systemOrange-default_IC: #c93400;
+  --systemOrange-vibrant_IC: #ad3a00;
+  --systemYellow: #fc0;
+  --systemYellow-vibrant: #f5c200;
+  --systemYellow-default_IC: #a05a00;
+  --systemYellow-vibrant_IC: #925100;
+  --systemGreen: #28cd41;
+  --systemGreen-vibrant: #1ec337;
+  --systemGreen-default_IC: #007d1b;
+  --systemGreen-vibrant_IC: #007018;
+  --systemMint: #00c7be;
+  --systemMint-vibrant: #00bdb4;
+  --systemMint-default_IC: #0c817b;
+  --systemMint-vibrant_IC: #0b7570;
+  --systemTeal: #59adc4;
+  --systemTeal-vibrant: #2ea7bd;
+  --systemTeal-default_IC: #008299;
+  --systemTeal-vibrant_IC: #00778c;
+  --systemCyan: #55bef0;
+  --systemCyan-vibrant: #41afdc;
+  --systemCyan-default_IC: #0071a4;
+  --systemCyan-vibrant_IC: #006796;
+  --systemBlue: #007aff;
+  --systemBlue-vibrant: #0070f5;
+  --systemBlue-default_IC: #0040dd;
+  --systemBlue-vibrant_IC: #0040dd;
+  --systemBlue-rollover: #0045b7;
+  --systemBlue-pressed: #005cd7;
+  --systemBlue-deepPressed: #0045b7;
+  --systemBlue-disabled: rgba(0, 122, 255, 0.35);
+  --systemIndigo: #5856d6;
+  --systemIndigo-vibrant: #5452cc;
+  --systemIndigo-default_IC: #3634a3;
+  --systemIndigo-vibrant_IC: #3634a3;
+  --systemPurple: #af52de;
+  --systemPurple-vibrant: #9f4bc9;
+  --systemPurple-default_IC: #ad44ab;
+  --systemPurple-vibrant_IC: #ad44ab;
+  --systemPink: #ff2d55;
+  --systemPink-vibrant: #f5234b;
+  --systemPink-default_IC: #d30f45;
+  --systemPink-vibrant_IC: #c11032;
+  --systemBrown: #a2845e;
+  --systemBrown-vibrant: #987a54;
+  --systemBrown-default_IC: #7f6545;
+  --systemBrown-vibrant_IC: #775d3b;
+  --systemGray: #8e8e93;
+  --systemGray-vibrant: #848489;
+  --systemGray-default_IC: #69696e;
+  --systemGray-vibrant_IC: #616165;
+  --systemPrimary: rgba(0, 0, 0, 0.85);
+  --systemPrimary-vibrant: #4c4c4c;
+  --systemPrimary-onLight: rgba(0, 0, 0, 0.85);
+  --systemPrimary-onDark: hsla(0, 0%, 100%, 0.85);
+  --systemPrimary-default_IC: #000;
+  --systemPrimary-vibrant_IC: #000;
+  --systemPrimary-onLight_IC: #000;
+  --systemPrimary-onDark_IC: #fff;
+  --systemSecondary: rgba(0, 0, 0, 0.5);
+  --systemSecondary-vibrant: gray;
+  --systemSecondary-onLight: rgba(0, 0, 0, 0.5);
+  --systemSecondary-onDark: hsla(0, 0%, 100%, 0.55);
+  --systemSecondary-default_IC: rgba(0, 0, 0, 0.76);
+  --systemSecondary-vibrant_IC: rgba(0, 0, 0, 0.76);
+  --systemSecondary-onLight_IC: rgba(0, 0, 0, 0.76);
+  --systemSecondary-onDark_IC: hsla(0, 0%, 100%, 0.7);
+  --systemTertiary: rgba(0, 0, 0, 0.25);
+  --systemTertiary-vibrant: #bfbfbf;
+  --systemTertiary-onLight: rgba(0, 0, 0, 0.25);
+  --systemTertiary-onDark: hsla(0, 0%, 100%, 0.25);
+  --systemTertiary-default_IC: rgba(0, 0, 0, 0.56);
+  --systemTertiary-vibrant_IC: rgba(0, 0, 0, 0.56);
+  --systemTertiary-onLight_IC: rgba(0, 0, 0, 0.56);
+  --systemTertiary-onDark_IC: hsla(0, 0%, 100%, 0.5);
+  --systemQuaternary: rgba(0, 0, 0, 0.1);
+  --systemQuaternary-vibrant: #e6e6e6;
+  --systemQuaternary-onLight: rgba(0, 0, 0, 0.1);
+  --systemQuaternary-onDark: hsla(0, 0%, 100%, 0.1);
+  --systemQuaternary-default_IC: rgba(0, 0, 0, 0.35);
+  --systemQuaternary-vibrant_IC: rgba(0, 0, 0, 0.35);
+  --systemQuaternary-onLight_IC: rgba(0, 0, 0, 0.35);
+  --systemQuaternary-onDark_IC: hsla(0, 0%, 100%, 0.3);
+  --systemQuinary: rgba(0, 0, 0, 0.05);
+  --systemQuinary-vibrant: #f2f2f2;
+  --systemQuinary-onLight: rgba(0, 0, 0, 0.05);
+  --systemQuinary-onDark: hsla(0, 0%, 100%, 0.05);
+  --systemQuinary-default_IC: rgba(0, 0, 0, 0.1);
+  --systemQuinary-vibrant_IC: rgba(0, 0, 0, 0.1);
+  --systemQuinary-onLight_IC: rgba(0, 0, 0, 0.1);
+  --systemQuinary-onDark_IC: hsla(0, 0%, 100%, 0.1);
+  --keyColor: #fa233b;
+  --keyColor-rgb: 250, 35, 59;
+  --keyColor-rollover: #c60007;
+  --keyColor-rollover-rgb: 198, 0, 7;
+  --keyColor-pressed: #e00921;
+  --keyColor-pressed-rgb: 224, 9, 33;
+  --keyColor-deepPressed: #c60007;
+  --keyColor-deepPressed-rgb: 198, 0, 7;
+  --keyColor-disabled: rgba(250, 35, 59, 0.35);
+  --keyColor-default_IC: #d60017;
+  --keyColor-default_IC-rgb: 214, 0, 23;
+  --keyColor-rollover_IC: #a20000;
+  --keyColor-rollover_IC-rgb: 162, 0, 0;
+  --keyColor-pressed_IC: #b00;
+  --keyColor-pressed_IC-rgb: 187, 0, 0;
+  --keyColor-deepPressed_IC: #a20000;
+  --keyColor-deepPressed_IC-rgb: 162, 0, 0;
+  --keyColor-disabled_IC: rgba(214, 0, 23, 0.25);
+  --systemStandardUltrathinMaterialSover: hsla(0, 0%, 96%, 0.36);
+  --systemStandardUltrathinMaterialSover-inactive: #f0f0f0;
+  --systemStandardUltrathinMaterialSover-default_IC: #d2d2d2;
+  --systemStandardUltrathinMaterialSover-inactive_IC: #ececec;
+  --systemStandardThinMaterialSover: hsla(0, 0%, 96%, 0.48);
+  --systemStandardThinMaterialSover-inactive: #f0f0f0;
+  --systemStandardThinMaterialSover-default_IC: #dcdcdc;
+  --systemStandardThinMaterialSover-inactive_IC: #ececec;
+  --systemStandardMediumMaterialSover: hsla(0, 0%, 96%, 0.6);
+  --systemStandardMediumMaterialSover-inactive: #f0f0f0;
+  --systemStandardMediumMaterialSover-default_IC: #e6e6e6;
+  --systemStandardMediumMaterialSover-inactive_IC: #ececec;
+  --systemStandardThickMaterialSover: hsla(0, 0%, 96%, 0.72);
+  --systemStandardThickMaterialSover-inactive: #f0f0f0;
+  --systemStandardThickMaterialSover-default_IC: #f0f0f0;
+  --systemStandardThickMaterialSover-inactive_IC: #ececec;
+  --systemStandardUltrathickMaterialSover: hsla(0, 0%, 96%, 0.84);
+  --systemStandardUltrathickMaterialSover-inactive: #f0f0f0;
+  --systemStandardUltrathickMaterialSover-default_IC: #fafafa;
+  --systemStandardUltrathickMaterialSover-inactive_IC: #ececec;
+  --systemHeaderMaterialSover: hsla(0, 0%, 100%, 0.8);
+  --systemHeaderMaterialSover-default_IC: #fff;
+  --systemToolbarTitlebarMaterialSover: hsla(0, 0%, 99%, 0.8);
+  --systemToolbarTitlebarMaterialSover-inactive: #f0f0f0;
+  --systemToolbarTitlebarMaterialSover-default_IC: #fff;
+  --systemToolbarTitlebarMaterialSover-inactive_IC: #ececec;
+  --labelDivider: rgba(0, 0, 0, 0.15);
+  --vibrantDivider: rgba(60, 60, 67, 0.29);
+  --pageBG: #fff;
+  --pageBG-rgb: 255, 255, 255;
+  --shelfBG: rgba(0, 0, 0, 0.05);
+  --genericJoeColor: #ebebeb;
+  --fallbackMaterialBG: hsla(0, 0%, 100%, 0.97);
+  --liveBadgePlatterBG: #ff5066;
+  --cardHoverColor: hsla(240, 3%, 49%, 0.25);
+  --contextMenuBorderColor: rgba(0, 0, 0, 0.15);
+  --contextMenuTextColor: rgba(0, 0, 0, 0.85);
+  --contextMenuOverrideTextColor: #ff3b30;
+  --dialogShadowColor: rgba(0, 0, 0, 0.25);
+  --footerBg: #fbfbfb;
+  --opaqueShelfBG: #f2f2f2;
+  --systemGray6: #6c6c70;
+  --lockupHoverBGColor: rgba(51, 51, 51, 0.3);
+  --lockupChinScrim: rgba(0, 0, 0, 0.2);
+  --mobileNavigationBG: #fff;
+  --playerBackgroundFallback: hsla(0, 0%, 100%, 0.97);
+  --playerBackgroundFallback-default_IC: #fafafa;
+  --playerBackground: hsla(0, 0%, 100%, 0.88);
+  --playerBackground-default_IC: #fafafa;
+  --navSidebarBG: rgba(60, 60, 67, 0.03);
+  --navSidebarBG-default_IC: #fafafa;
+  --navSidebarSelectedState: rgba(60, 60, 67, 0.1);
+  --searchBoxIconFill: rgba(0, 0, 0, 0.65);
+  --bannerDarkGray: #444;
+  --dropdownBackground: #575757;
+  --dropdownLightGray: #707070;
+  --dropdownLightGrayIcon: #999;
+  --dropdownActiveOutlineColor: #06c;
+  --dropdownActiveOutlineColorShadow: rgba(0, 102, 204, 0.6);
+  --radiosityShadowColor: rgba(0, 0, 0, 0.1);
+  --searchBarBorderColor: rgba(0, 0, 0, 0.15);
+  --musicKeyColor: #fa233b;
+  --musicKeyColor-rollover: #c60007;
+  --musicKeyColor-pressed: #e00921;
+  --musicKeyColor-deepPressed: #c60007;
+  --musicKeyColor-disabled: rgba(250, 35, 59, 0.35);
+  --musicKeyColor-default_IC: #d60017;
+  --musicKeyColor-rollover_IC: #a20000;
+  --musicKeyColor-pressed_IC: #b00;
+  --musicKeyColor-deepPressed_IC: #a20000;
+  --musicKeyColor-disabled_IC: rgba(214, 0, 23, 0.25);
+  --circularArtistHeaderGradientBottom: rgba(0, 0, 0, 0.05);
+  --fallbackButtonMaterial: hsla(240, 2%, 57%, 0.8);
+  --playerMissingArtworkIcon: #dcdcdc;
+  --playerMissingArtworkBg: #e9e9e9;
+  --playerPlatterButtonBGFill: #6c6c6c;
+  --playerPlatterButtonIconFill: #fff;
+  --stickyHeaderDropShadow2: rgba(0, 0, 0, 0.07);
+  --stickyHeaderInnerShadow: hsla(0, 0%, 100%, 0.45);
+  --tracklistAltRowColor: rgba(0, 0, 0, 0.015);
+  --tracklistAltRowColor-default_IC: rgba(0, 0, 0, 0.05);
+  --tracklistHoverColor: rgba(0, 0, 0, 0.06);
+  --tracklistHoverColor-default_IC: rgba(0, 0, 0, 0.1);
+  --tracklistWorksTrackHoverColor: rgba(0, 0, 0, 0.1);
+  --tracklistWorksTrackHoverColor-default_IC: rgba(0, 0, 0, 0.18);
+  --trackLockupArtworkOverlay: rgba(51, 51, 51, 0.3);
+  --lyricsBg: #fff;
+  --iPhoneNowPlayingBackdropBG: #dbccc4;
+  --keyColorBG: #fa233b;
+  --keyColorBG-default_IC: #d60017;
+  --selectionColor: #dd1f34;
+  --selectionColor-default_IC: #d60017;
+  --trackBackgroundEven: rgba(0, 0, 0, 0.02);
+  --librarySongsTrackInactiveBG: rgba(0, 0, 0, 0.14);
+  --profileBadgeBG: #e2e4e7;
+  --segmentedControlBG: hsla(240, 4%, 48%, 0.12);
+  --segmentedControlBG-default_IC: rgba(0, 0, 0, 0.2);
+  --segmentedControlSelectedText: rgba(0, 0, 0, 0.85);
+  --segmentedControlSelectedText-default_IC: #000;
+  --segmentedControlSelectedBG: #fff;
+  --segmentedControlActiveBG: hsla(0, 0%, 100%, 0.7);
+  --segmentedControlActiveBG-default_IC: #d9d9d9;
+  --segmentedControlSelectedShadow1: rgba(0, 0, 0, 0.12);
+  --segmentedControlSelectedShadow2: rgba(0, 0, 0, 0.04);
+  --segmentedControlSelectedBorder: rgba(0, 0, 0, 0.15);
+  color-scheme: light dark;
+}
+@supports not (font: -apple-system-body) {
+  :root {
+    --systemPrimary: rgba(0, 0, 0, 0.88);
+    --systemPrimary-vibrant: #1d1d1f;
+    --systemPrimary-onLight: rgba(0, 0, 0, 0.88);
+    --systemPrimary-onDark: hsla(0, 0%, 100%, 0.92);
+    --systemSecondary: rgba(0, 0, 0, 0.56);
+    --systemSecondary-vibrant: rgba(0, 0, 0, 0.56);
+    --systemSecondary-onLight: rgba(0, 0, 0, 0.56);
+    --systemSecondary-onDark: hsla(0, 0%, 100%, 0.64);
+    --systemTertiary: rgba(0, 0, 0, 0.48);
+    --systemTertiary-vibrant: rgba(0, 0, 0, 0.48);
+    --systemTertiary-onLight: rgba(0, 0, 0, 0.48);
+    --systemTertiary-onDark: hsla(0, 0%, 100%, 0.4);
+    --keyColor: #d60017;
+    --keyColor-rgb: 214, 0, 23;
+    --keyColor-rollover: #a20000;
+    --keyColor-rollover-rgb: 162, 0, 0;
+    --keyColor-pressed: #b00;
+    --keyColor-pressed-rgb: 187, 0, 0;
+    --keyColor-deepPressed: #a20000;
+    --keyColor-deepPressed-rgb: 162, 0, 0;
+    --keyColor-disabled: rgba(214, 0, 23, 0.25);
+    --musicKeyColor: #d60017;
+    --musicKeyColor-rollover: #a20000;
+    --musicKeyColor-pressed: #b00;
+    --musicKeyColor-deepPressed: #a20000;
+    --musicKeyColor-disabled: rgba(214, 0, 23, 0.25);
+    --keyColorBG: #d60017;
+    --selectionColor: #d60017;
+    --segmentedControlSelectedText: rgba(0, 0, 0, 0.88);
+  }
+}
+@media (prefers-contrast: more) {
+  :root {
+    --systemRed: #d70015;
+    --systemRed-vibrant: #c20618;
+    --systemOrange: #c93400;
+    --systemOrange-vibrant: #ad3a00;
+    --systemYellow: #a05a00;
+    --systemYellow-vibrant: #925100;
+    --systemGreen: #007d1b;
+    --systemGreen-vibrant: #007018;
+    --systemMint: #0c817b;
+    --systemMint-vibrant: #0b7570;
+    --systemTeal: #008299;
+    --systemTeal-vibrant: #00778c;
+    --systemCyan: #0071a4;
+    --systemCyan-vibrant: #006796;
+    --systemBlue: #0040dd;
+    --systemBlue-vibrant: #0040dd;
+    --systemIndigo: #3634a3;
+    --systemIndigo-vibrant: #3634a3;
+    --systemPurple: #ad44ab;
+    --systemPurple-vibrant: #ad44ab;
+    --systemPink: #d30f45;
+    --systemPink-vibrant: #c11032;
+    --systemBrown: #7f6545;
+    --systemBrown-vibrant: #775d3b;
+    --systemGray: #69696e;
+    --systemGray-vibrant: #616165;
+    --systemPrimary: #000;
+    --systemPrimary-vibrant: #000;
+    --systemPrimary-onLight: #000;
+    --systemPrimary-onDark: #fff;
+    --systemSecondary: rgba(0, 0, 0, 0.76);
+    --systemSecondary-vibrant: rgba(0, 0, 0, 0.76);
+    --systemSecondary-onLight: rgba(0, 0, 0, 0.76);
+    --systemSecondary-onDark: hsla(0, 0%, 100%, 0.7);
+    --systemTertiary: rgba(0, 0, 0, 0.56);
+    --systemTertiary-vibrant: rgba(0, 0, 0, 0.56);
+    --systemTertiary-onLight: rgba(0, 0, 0, 0.56);
+    --systemTertiary-onDark: hsla(0, 0%, 100%, 0.5);
+    --systemQuaternary: rgba(0, 0, 0, 0.35);
+    --systemQuaternary-vibrant: rgba(0, 0, 0, 0.35);
+    --systemQuaternary-onLight: rgba(0, 0, 0, 0.35);
+    --systemQuaternary-onDark: hsla(0, 0%, 100%, 0.3);
+    --systemQuinary: rgba(0, 0, 0, 0.1);
+    --systemQuinary-vibrant: rgba(0, 0, 0, 0.1);
+    --systemQuinary-onLight: rgba(0, 0, 0, 0.1);
+    --systemQuinary-onDark: hsla(0, 0%, 100%, 0.1);
+    --keyColor: #d60017;
+    --keyColor-rgb: 214, 0, 23;
+    --keyColor-rollover: #a20000;
+    --keyColor-rollover-rgb: 162, 0, 0;
+    --keyColor-pressed: #b00;
+    --keyColor-pressed-rgb: 187, 0, 0;
+    --keyColor-deepPressed: #a20000;
+    --keyColor-deepPressed-rgb: 162, 0, 0;
+    --keyColor-disabled: rgba(214, 0, 23, 0.25);
+    --systemStandardUltrathinMaterialSover: #d2d2d2;
+    --systemStandardUltrathinMaterialSover-inactive: #ececec;
+    --systemStandardThinMaterialSover: #dcdcdc;
+    --systemStandardThinMaterialSover-inactive: #ececec;
+    --systemStandardMediumMaterialSover: #e6e6e6;
+    --systemStandardMediumMaterialSover-inactive: #ececec;
+    --systemStandardThickMaterialSover: #f0f0f0;
+    --systemStandardThickMaterialSover-inactive: #ececec;
+    --systemStandardUltrathickMaterialSover: #fafafa;
+    --systemStandardUltrathickMaterialSover-inactive: #ececec;
+    --systemHeaderMaterialSover: #fff;
+    --systemToolbarTitlebarMaterialSover: #fff;
+    --systemToolbarTitlebarMaterialSover-inactive: #ececec;
+    --playerBackgroundFallback: #fafafa;
+    --playerBackground: #fafafa;
+    --navSidebarBG: #fafafa;
+    --musicKeyColor: #d60017;
+    --musicKeyColor-rollover: #a20000;
+    --musicKeyColor-pressed: #b00;
+    --musicKeyColor-deepPressed: #a20000;
+    --musicKeyColor-disabled: rgba(214, 0, 23, 0.25);
+    --tracklistAltRowColor: rgba(0, 0, 0, 0.05);
+    --tracklistHoverColor: rgba(0, 0, 0, 0.1);
+    --tracklistWorksTrackHoverColor: rgba(0, 0, 0, 0.18);
+    --keyColorBG: #d60017;
+    --selectionColor: #d60017;
+    --segmentedControlBG: rgba(0, 0, 0, 0.2);
+    --segmentedControlSelectedText: #000;
+    --segmentedControlActiveBG: #d9d9d9;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --systemRed: #ff453a;
+    --systemRed-vibrant: #ff4f44;
+    --systemRed-default_IC: #ff6961;
+    --systemRed-vibrant_IC: #ff4136;
+    --systemOrange: #ff9f0a;
+    --systemOrange-vibrant: #ffa914;
+    --systemOrange-default_IC: #ffb340;
+    --systemOrange-vibrant_IC: #ffb340;
+    --systemYellow: #ffd60a;
+    --systemYellow-vibrant: #ffe014;
+    --systemYellow-default_IC: #ffd426;
+    --systemYellow-vibrant_IC: #ffd426;
+    --systemGreen: #32d74b;
+    --systemGreen-vibrant: #3ce155;
+    --systemGreen-default_IC: #31de4b;
+    --systemGreen-vibrant_IC: #31de4b;
+    --systemMint: #63e6e2;
+    --systemMint-vibrant: #6ce0db;
+    --systemMint-default_IC: #63e6e2;
+    --systemMint-vibrant_IC: #63e6e2;
+    --systemTeal: #6ac4dc;
+    --systemTeal-vibrant: #44d4ed;
+    --systemTeal-default_IC: #5de6ff;
+    --systemTeal-vibrant_IC: #5de6ff;
+    --systemCyan: #5ac8f5;
+    --systemCyan-vibrant: #5acdfa;
+    --systemCyan-default_IC: #70d7ff;
+    --systemCyan-vibrant_IC: #70d7ff;
+    --systemBlue: #0a84ff;
+    --systemBlue-vibrant: #148eff;
+    --systemBlue-default_IC: #409cff;
+    --systemBlue-vibrant_IC: #409cff;
+    --systemBlue-rollover: #47c1ff;
+    --systemBlue-pressed: #38b2ff;
+    --systemBlue-deepPressed: #47c1ff;
+    --systemBlue-disabled: rgba(10, 132, 255, 0.5);
+    --systemIndigo: #5e5ce6;
+    --systemIndigo-vibrant: #6361f2;
+    --systemIndigo-default_IC: #7d7aff;
+    --systemIndigo-vibrant_IC: #7d7aff;
+    --systemPurple: #bf5af2;
+    --systemPurple-vibrant: #cc65ff;
+    --systemPurple-default_IC: #da8fff;
+    --systemPurple-vibrant_IC: #da8fff;
+    --systemPink: #ff375f;
+    --systemPink-vibrant: #ff4169;
+    --systemPink-default_IC: #ff6482;
+    --systemPink-vibrant_IC: #ff3a5f;
+    --systemBrown: #ac8e68;
+    --systemBrown-vibrant: #b69872;
+    --systemBrown-default_IC: #b59469;
+    --systemBrown-vibrant_IC: #b59469;
+    --systemGray: #98989d;
+    --systemGray-vibrant: #a2a2a7;
+    --systemGray-default_IC: #98989d;
+    --systemGray-vibrant_IC: #98989d;
+    --systemPrimary: hsla(0, 0%, 100%, 0.85);
+    --systemPrimary-vibrant: #e5e5e5;
+    --systemPrimary-onLight: rgba(0, 0, 0, 0.85);
+    --systemPrimary-onDark: hsla(0, 0%, 100%, 0.85);
+    --systemPrimary-default_IC: #fff;
+    --systemPrimary-vibrant_IC: #fff;
+    --systemPrimary-onLight_IC: #000;
+    --systemPrimary-onDark_IC: #fff;
+    --systemSecondary: hsla(0, 0%, 100%, 0.55);
+    --systemSecondary-vibrant: #7c7c7c;
+    --systemSecondary-onLight: rgba(0, 0, 0, 0.5);
+    --systemSecondary-onDark: hsla(0, 0%, 100%, 0.55);
+    --systemSecondary-default_IC: hsla(0, 0%, 100%, 0.7);
+    --systemSecondary-vibrant_IC: hsla(0, 0%, 100%, 0.7);
+    --systemSecondary-onLight_IC: rgba(0, 0, 0, 0.76);
+    --systemSecondary-onDark_IC: hsla(0, 0%, 100%, 0.7);
+    --systemTertiary: hsla(0, 0%, 100%, 0.25);
+    --systemTertiary-vibrant: #414141;
+    --systemTertiary-onLight: rgba(0, 0, 0, 0.25);
+    --systemTertiary-onDark: hsla(0, 0%, 100%, 0.25);
+    --systemTertiary-default_IC: hsla(0, 0%, 100%, 0.5);
+    --systemTertiary-vibrant_IC: hsla(0, 0%, 100%, 0.5);
+    --systemTertiary-onLight_IC: rgba(0, 0, 0, 0.56);
+    --systemTertiary-onDark_IC: hsla(0, 0%, 100%, 0.5);
+    --systemQuaternary: hsla(0, 0%, 100%, 0.1);
+    --systemQuaternary-vibrant: #232323;
+    --systemQuaternary-onLight: rgba(0, 0, 0, 0.1);
+    --systemQuaternary-onDark: hsla(0, 0%, 100%, 0.1);
+    --systemQuaternary-default_IC: hsla(0, 0%, 100%, 0.3);
+    --systemQuaternary-vibrant_IC: hsla(0, 0%, 100%, 0.3);
+    --systemQuaternary-onLight_IC: rgba(0, 0, 0, 0.35);
+    --systemQuaternary-onDark_IC: hsla(0, 0%, 100%, 0.3);
+    --systemQuinary: hsla(0, 0%, 100%, 0.05);
+    --systemQuinary-vibrant: #080808;
+    --systemQuinary-onLight: rgba(0, 0, 0, 0.05);
+    --systemQuinary-onDark: hsla(0, 0%, 100%, 0.05);
+    --systemQuinary-default_IC: hsla(0, 0%, 100%, 0.1);
+    --systemQuinary-vibrant_IC: hsla(0, 0%, 100%, 0.1);
+    --systemQuinary-onLight_IC: rgba(0, 0, 0, 0.1);
+    --systemQuinary-onDark_IC: hsla(0, 0%, 100%, 0.1);
+    --keyColor: #fa2d48;
+    --keyColor-rgb: 250, 45, 72;
+    --keyColor-rollover: #ff5f7a;
+    --keyColor-rollover-rgb: 255, 95, 122;
+    --keyColor-pressed: #ff4661;
+    --keyColor-pressed-rgb: 255, 70, 97;
+    --keyColor-deepPressed: #ff5f7a;
+    --keyColor-deepPressed-rgb: 255, 95, 122;
+    --keyColor-disabled: rgba(250, 45, 72, 0.35);
+    --keyColor-default_IC: #fa586a;
+    --keyColor-default_IC-rgb: 250, 88, 106;
+    --keyColor-rollover_IC: #ff8a9c;
+    --keyColor-rollover_IC-rgb: 255, 138, 156;
+    --keyColor-pressed_IC: #ff7183;
+    --keyColor-pressed_IC-rgb: 255, 113, 131;
+    --keyColor-deepPressed_IC: #ff8a9c;
+    --keyColor-deepPressed_IC-rgb: 255, 138, 156;
+    --keyColor-disabled_IC: rgba(250, 88, 106, 0.35);
+    --systemStandardUltrathinMaterialSover: rgba(40, 40, 40, 0.4);
+    --systemStandardUltrathinMaterialSover-inactive: #282828;
+    --systemStandardUltrathinMaterialSover-default_IC: #000;
+    --systemStandardUltrathinMaterialSover-inactive_IC: #141414;
+    --systemStandardThinMaterialSover: rgba(40, 40, 40, 0.5);
+    --systemStandardThinMaterialSover-inactive: #282828;
+    --systemStandardThinMaterialSover-default_IC: #0a0a0a;
+    --systemStandardThinMaterialSover-inactive_IC: #141414;
+    --systemStandardMediumMaterialSover: rgba(40, 40, 40, 0.6);
+    --systemStandardMediumMaterialSover-inactive: #282828;
+    --systemStandardMediumMaterialSover-default_IC: #141414;
+    --systemStandardMediumMaterialSover-inactive_IC: #141414;
+    --systemStandardThickMaterialSover: rgba(40, 40, 40, 0.7);
+    --systemStandardThickMaterialSover-inactive: #282828;
+    --systemStandardThickMaterialSover-default_IC: #1e1e1e;
+    --systemStandardThickMaterialSover-inactive_IC: #141414;
+    --systemStandardUltrathickMaterialSover: rgba(40, 40, 40, 0.8);
+    --systemStandardUltrathickMaterialSover-inactive: #282828;
+    --systemStandardUltrathickMaterialSover-default_IC: #282828;
+    --systemStandardUltrathickMaterialSover-inactive_IC: #141414;
+    --systemHeaderMaterialSover: rgba(30, 30, 30, 0.8);
+    --systemHeaderMaterialSover-default_IC: #1e1e1e;
+    --systemToolbarTitlebarMaterialSover: rgba(60, 60, 60, 0.8);
+    --systemToolbarTitlebarMaterialSover-inactive: #282828;
+    --systemToolbarTitlebarMaterialSover-default_IC: #262626;
+    --systemToolbarTitlebarMaterialSover-inactive_IC: #141414;
+    --labelDivider: hsla(0, 0%, 100%, 0.1);
+    --vibrantDivider: rgba(235, 235, 245, 0.19);
+    --pageBG: #1f1f1f;
+    --pageBG-rgb: 31, 31, 31;
+    --shelfBG: hsla(0, 0%, 100%, 0.05);
+    --genericJoeColor: #323232;
+    --fallbackMaterialBG: rgba(31, 31, 31, 0.97);
+    --liveBadgePlatterBG: #ff5066;
+    --cardHoverColor: hsla(240, 3%, 49%, 0.41);
+    --contextMenuBorderColor: hsla(0, 0%, 100%, 0.1);
+    --contextMenuTextColor: hsla(0, 0%, 100%, 0.85);
+    --contextMenuOverrideTextColor: #ff3b30;
+    --dialogShadowColor: rgba(0, 0, 0, 0.55);
+    --footerBg: #323232;
+    --opaqueShelfBG: #2b2b2b;
+    --systemGray6: #aeaeb2;
+    --lockupHoverBGColor: rgba(51, 51, 51, 0.3);
+    --lockupChinScrim: rgba(0, 0, 0, 0.2);
+    --mobileNavigationBG: #2e2e2e;
+    --playerBackgroundFallback: rgba(45, 45, 45, 0.97);
+    --playerBackgroundFallback-default_IC: #282828;
+    --playerBackground: rgba(45, 45, 45, 0.88);
+    --playerBackground-default_IC: #282828;
+    --navSidebarBG: rgba(235, 235, 245, 0.03);
+    --navSidebarBG-default_IC: #282828;
+    --navSidebarSelectedState: rgba(235, 235, 245, 0.1);
+    --searchBoxIconFill: hsla(0, 0%, 100%, 0.9);
+    --bannerDarkGray: #444;
+    --dropdownBackground: #575757;
+    --dropdownLightGray: #707070;
+    --dropdownLightGrayIcon: #999;
+    --dropdownActiveOutlineColor: #06c;
+    --dropdownActiveOutlineColorShadow: rgba(0, 102, 204, 0.6);
+    --radiosityShadowColor: rgba(0, 0, 0, 0.3);
+    --searchBarBorderColor: hsla(0, 0%, 100%, 0.15);
+    --musicKeyColor: #fa2d48;
+    --musicKeyColor-rollover: #ff5f7a;
+    --musicKeyColor-pressed: #ff4661;
+    --musicKeyColor-deepPressed: #ff5f7a;
+    --musicKeyColor-disabled: rgba(250, 45, 72, 0.35);
+    --musicKeyColor-default_IC: #fa586a;
+    --musicKeyColor-rollover_IC: #ff8a9c;
+    --musicKeyColor-pressed_IC: #ff7183;
+    --musicKeyColor-deepPressed_IC: #ff8a9c;
+    --musicKeyColor-disabled_IC: rgba(250, 88, 106, 0.35);
+    --circularArtistHeaderGradientBottom: hsla(0, 0%, 100%, 0.03);
+    --fallbackButtonMaterial: hsla(240, 2%, 61%, 0.8);
+    --playerMissingArtworkIcon: #434343;
+    --playerMissingArtworkBg: #323232;
+    --playerPlatterButtonBGFill: #fff;
+    --playerPlatterButtonIconFill: rgba(0, 0, 0, 0.7);
+    --stickyHeaderDropShadow2: rgba(0, 0, 0, 0.1);
+    --stickyHeaderInnerShadow: hsla(0, 0%, 100%, 0.1);
+    --tracklistAltRowColor: hsla(0, 0%, 100%, 0.015);
+    --tracklistAltRowColor-default_IC: hsla(0, 0%, 100%, 0.05);
+    --tracklistHoverColor: hsla(0, 0%, 100%, 0.06);
+    --tracklistHoverColor-default_IC: hsla(0, 0%, 100%, 0.1);
+    --tracklistWorksTrackHoverColor: hsla(0, 0%, 100%, 0.1);
+    --tracklistWorksTrackHoverColor-default_IC: hsla(0, 0%, 100%, 0.18);
+    --trackLockupArtworkOverlay: rgba(51, 51, 51, 0.3);
+    --lyricsBg: #2d2d2d;
+    --iPhoneNowPlayingBackdropBG: #dbccc4;
+    --keyColorBG: #fa233b;
+    --keyColorBG-default_IC: #d60017;
+    --selectionColor: #c11b2e;
+    --selectionColor-default_IC: #a60012;
+    --trackBackgroundEven: hsla(0, 0%, 100%, 0.05);
+    --librarySongsTrackInactiveBG: rgba(255, 255, 240, 0.12);
+    --profileBadgeBG: #e2e4e7;
+    --segmentedControlBG: hsla(240, 4%, 48%, 0.24);
+    --segmentedControlBG-default_IC: hsla(0, 0%, 100%, 0.24);
+    --segmentedControlSelectedText: hsla(0, 0%, 100%, 0.85);
+    --segmentedControlSelectedText-default_IC: #000;
+    --segmentedControlSelectedBG: #636366;
+    --segmentedControlSelectedBG-default_IC: #fff;
+    --segmentedControlActiveBG: #747477;
+    --segmentedControlActiveBG-default_IC: rgba(255, 255, 240, 0.9);
+    --segmentedControlSelectedShadow1: transparent;
+    --segmentedControlSelectedShadow2: transparent;
+  }
+  @supports not (font: -apple-system-body) {
+    :root {
+      --systemPrimary: hsla(0, 0%, 100%, 0.92);
+      --systemPrimary-vibrant: #f5f5f7;
+      --systemPrimary-onLight: rgba(0, 0, 0, 0.88);
+      --systemPrimary-onDark: hsla(0, 0%, 100%, 0.92);
+      --systemSecondary: hsla(0, 0%, 100%, 0.64);
+      --systemSecondary-vibrant: #a1a1a6;
+      --systemSecondary-onLight: rgba(0, 0, 0, 0.56);
+      --systemSecondary-onDark: hsla(0, 0%, 100%, 0.64);
+      --systemTertiary: hsla(0, 0%, 100%, 0.4);
+      --systemTertiary-vibrant: #6e6e73;
+      --systemTertiary-onLight: rgba(0, 0, 0, 0.48);
+      --systemTertiary-onDark: hsla(0, 0%, 100%, 0.4);
+      --keyColor: #fa586a;
+      --keyColor-rgb: 250, 88, 106;
+      --keyColor-rollover: #ff8a9c;
+      --keyColor-rollover-rgb: 255, 138, 156;
+      --keyColor-pressed: #ff7183;
+      --keyColor-pressed-rgb: 255, 113, 131;
+      --keyColor-deepPressed: #ff8a9c;
+      --keyColor-deepPressed-rgb: 255, 138, 156;
+      --keyColor-disabled: rgba(250, 88, 106, 0.35);
+      --musicKeyColor: #fa586a;
+      --musicKeyColor-rollover: #ff8a9c;
+      --musicKeyColor-pressed: #ff7183;
+      --musicKeyColor-deepPressed: #ff8a9c;
+      --musicKeyColor-disabled: rgba(250, 88, 106, 0.35);
+      --keyColorBG: #d60017;
+      --selectionColor: #a60012;
+    }
+  }
+}
+@media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+  :root {
+    --systemRed: #ff6961;
+    --systemRed-vibrant: #ff4136;
+    --systemOrange: #ffb340;
+    --systemOrange-vibrant: #ffb340;
+    --systemYellow: #ffd426;
+    --systemYellow-vibrant: #ffd426;
+    --systemGreen: #31de4b;
+    --systemGreen-vibrant: #31de4b;
+    --systemMint: #63e6e2;
+    --systemMint-vibrant: #63e6e2;
+    --systemTeal: #5de6ff;
+    --systemTeal-vibrant: #5de6ff;
+    --systemCyan: #70d7ff;
+    --systemCyan-vibrant: #70d7ff;
+    --systemBlue: #409cff;
+    --systemBlue-vibrant: #409cff;
+    --systemIndigo: #7d7aff;
+    --systemIndigo-vibrant: #7d7aff;
+    --systemPurple: #da8fff;
+    --systemPurple-vibrant: #da8fff;
+    --systemPink: #ff6482;
+    --systemPink-vibrant: #ff3a5f;
+    --systemBrown: #b59469;
+    --systemBrown-vibrant: #b59469;
+    --systemGray: #98989d;
+    --systemGray-vibrant: #98989d;
+    --systemPrimary: #fff;
+    --systemPrimary-vibrant: #fff;
+    --systemPrimary-onLight: #000;
+    --systemPrimary-onDark: #fff;
+    --systemSecondary: hsla(0, 0%, 100%, 0.7);
+    --systemSecondary-vibrant: hsla(0, 0%, 100%, 0.7);
+    --systemSecondary-onLight: rgba(0, 0, 0, 0.76);
+    --systemSecondary-onDark: hsla(0, 0%, 100%, 0.7);
+    --systemTertiary: hsla(0, 0%, 100%, 0.5);
+    --systemTertiary-vibrant: hsla(0, 0%, 100%, 0.5);
+    --systemTertiary-onLight: rgba(0, 0, 0, 0.56);
+    --systemTertiary-onDark: hsla(0, 0%, 100%, 0.5);
+    --systemQuaternary: hsla(0, 0%, 100%, 0.3);
+    --systemQuaternary-vibrant: hsla(0, 0%, 100%, 0.3);
+    --systemQuaternary-onLight: rgba(0, 0, 0, 0.35);
+    --systemQuaternary-onDark: hsla(0, 0%, 100%, 0.3);
+    --systemQuinary: hsla(0, 0%, 100%, 0.1);
+    --systemQuinary-vibrant: hsla(0, 0%, 100%, 0.1);
+    --systemQuinary-onLight: rgba(0, 0, 0, 0.1);
+    --systemQuinary-onDark: hsla(0, 0%, 100%, 0.1);
+    --keyColor: #fa586a;
+    --keyColor-rgb: 250, 88, 106;
+    --keyColor-rollover: #ff8a9c;
+    --keyColor-rollover-rgb: 255, 138, 156;
+    --keyColor-pressed: #ff7183;
+    --keyColor-pressed-rgb: 255, 113, 131;
+    --keyColor-deepPressed: #ff8a9c;
+    --keyColor-deepPressed-rgb: 255, 138, 156;
+    --keyColor-disabled: rgba(250, 88, 106, 0.35);
+    --systemStandardUltrathinMaterialSover: #000;
+    --systemStandardUltrathinMaterialSover-inactive: #141414;
+    --systemStandardThinMaterialSover: #0a0a0a;
+    --systemStandardThinMaterialSover-inactive: #141414;
+    --systemStandardMediumMaterialSover: #141414;
+    --systemStandardMediumMaterialSover-inactive: #141414;
+    --systemStandardThickMaterialSover: #1e1e1e;
+    --systemStandardThickMaterialSover-inactive: #141414;
+    --systemStandardUltrathickMaterialSover: #282828;
+    --systemStandardUltrathickMaterialSover-inactive: #141414;
+    --systemHeaderMaterialSover: #1e1e1e;
+    --systemToolbarTitlebarMaterialSover: #262626;
+    --systemToolbarTitlebarMaterialSover-inactive: #141414;
+    --playerBackgroundFallback: #282828;
+    --playerBackground: #282828;
+    --navSidebarBG: #282828;
+    --musicKeyColor: #fa586a;
+    --musicKeyColor-rollover: #ff8a9c;
+    --musicKeyColor-pressed: #ff7183;
+    --musicKeyColor-deepPressed: #ff8a9c;
+    --musicKeyColor-disabled: rgba(250, 88, 106, 0.35);
+    --tracklistAltRowColor: hsla(0, 0%, 100%, 0.05);
+    --tracklistHoverColor: hsla(0, 0%, 100%, 0.1);
+    --tracklistWorksTrackHoverColor: hsla(0, 0%, 100%, 0.18);
+    --keyColorBG: #d60017;
+    --selectionColor: #a60012;
+    --segmentedControlBG: hsla(0, 0%, 100%, 0.24);
+    --segmentedControlSelectedText: #000;
+    --segmentedControlSelectedBG: #fff;
+    --segmentedControlActiveBG: rgba(255, 255, 240, 0.9);
+  }
+}
+:root {
+  --viewport-default: 'xsmall';
+}
+@media only screen and (min-width: 1000px) {
+  :root {
+    --viewport-default: 'small';
+  }
+}
+@media only screen and (min-width: 1260px) {
+  :root {
+    --viewport-default: 'medium';
+  }
+}
+@media only screen and (min-width: 1580px) {
+  :root {
+    --viewport-default: 'large';
+  }
+}
+@media only screen and (min-width: 1940px) {
+  :root {
+    --viewport-default: 'xlarge';
+  }
+}
+html {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 106.25%;
+  quotes: '\201c''\201d';
+}
+[lang]:lang(ar) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    Arabic UI Text, SF Pro Icons, Segoe UI, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+[lang]:lang(he) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    Arial Hebrew, SF Pro Icons, Segoe UI, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+[lang]:lang(hi) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    Kohinoor Devanagari, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+[lang]:lang(ja) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    Hiragino Sans, SF Pro Icons, Hiragino Kaku Gothic Pro,
+    \30d2\30e9\30ae\30ce\89d2\30b4 Pro W3, \30e1\30a4\30ea\30aa, Meiryo,
+    \ff2d\ff33\ff30\30b4\30b7\30c3\30af, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+[lang]:lang(ko) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    Apple SD Gothic Neo, SF Pro Icons, Apple Gothic, HY Gulim, MalgunGothic,
+    HY Dotum, Lexi Gulim, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+[lang]:lang(th) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    Thonburi Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+[lang]:lang(zh-CN) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    PingFang SC, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+[lang]:lang(zh-HK),
+[lang]:lang(zh-MO) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    PingFang HK, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+[lang]:lang(zh-TW) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    PingFang TC, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+:lang(cs),
+:lang(de) {
+  quotes: '\201e''\201c';
+}
+:lang(de-CH),
+:lang(de-LI) {
+  quotes: '\ab''\bb';
+}
+:lang(fr) {
+  quotes: '\ab\a0''\a0\bb';
+}
+:lang(es-ES),
+:lang(fr-CH) {
+  quotes: '\ab''\bb';
+}
+:lang(hu) {
+  quotes: '\201e''\201c';
+}
+:lang(ja-JP) {
+  quotes: '\300c''\300d';
+}
+:lang(no-NO) {
+  quotes: '\ab''\bb';
+}
+:lang(lt),
+:lang(pl) {
+  quotes: '\201e''\201c';
+}
+:lang(ru) {
+  quotes: '\ab  '' \bb';
+}
+:lang(zh) {
+  quotes: '\300c''\300d';
+}
+:lang(zh-CN) {
+  quotes: '\201c''\201d';
+}
+body {
+  color: var(--bodyTextColor, var(--systemPrimary));
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.23077;
+}
+body:lang(th) {
+  line-height: 1.72308;
+}
+body:lang(ar) {
+  font-family: -apple-system, BlinkMacSystemFont, Apple Color Emoji, SF Pro,
+    Arabic UI Text, SF Pro Icons, Segoe UI, Helvetica Neue, Helvetica, Arial,
+    sans-serif;
+}
+body,
+button,
+input,
+select,
+textarea {
+  -moz-font-feature-settings: 'kern';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+}
+.link,
+a {
+  color: var(--linkColor, inherit);
+  cursor: pointer;
+  letter-spacing: inherit;
+  text-decoration: none;
+}
+.link:hover,
+a:hover {
+  -webkit-text-decoration: var(--linkHoverTextDecoration, underline);
+  text-decoration: var(--linkHoverTextDecoration, underline);
+}
+.link:focus,
+.link:hover,
+a:focus,
+a:hover {
+  color: var(--linkHoverColor, var(--linkColor, inherit));
+}
+.link:disabled,
+a:disabled {
+  opacity: 0.32;
+}
+li {
+  list-style: none;
+}
+em {
+  font-style: italic;
+}
+:lang(ja),
+:lang(ko),
+:lang(th),
+:lang(zh) {
+  font-style: normal;
+}
+:lang(ko) {
+  word-break: keep-all;
+}
+.text-align-center {
+  text-align: center;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Apple SD Gothic Neo Regular'), local('AppleSDGothicNeo-Regular'),
+    url(/assets/fonts/locale-switcher/AppleSDGothicNeo-Regular-subset.woff2)
+      format('woff2');
+  unicode-range: U+ad6d, U+b300, U+bbf8, U+bbfc, U+c5b4, U+d55c;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher;
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/locale-switcher/ArabicUIText-Regular-subset.woff2)
+    format('woff2');
+  unicode-range: U+20, U+627-62a, U+62d, U+62f, U+631, U+639, U+644, U+645,
+    U+648, U+64a;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Arial Hebrew'), local('ArialHebrew'),
+    url(/assets/fonts/locale-switcher/ArialHebrew-subset.woff2) format('woff2');
+  unicode-range: U+5d0, U+5d9, U+5dc, U+5e8, U+5e9;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Hiragino Sans W4'), local('HiraginoSans-W4'),
+    url(/assets/fonts/locale-switcher/HiraginoSans-W4-subset.woff2)
+      format('woff2');
+  unicode-range: U+65e5, U+672c;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher PingFang HK;
+  font-style: normal;
+  font-weight: 400;
+  src: local('PingFang HK Regular'), local('PingFangHK-Regular'),
+    url(/assets/fonts/locale-switcher/PingFangHK-Regular-subset.woff2)
+      format('woff2');
+  unicode-range: U+20, U+4e2d, U+4f53, U+53f0, U+570b, U+5927, U+6587, U+6e2f,
+    U+6fb3, U+7063, U+7b80, U+7c21, U+7e41, U+7f8e, U+9580, U+9678, U+9999,
+    U+9ad4;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher PingFang SC;
+  font-style: normal;
+  font-weight: 400;
+  src: local('PingFang SC Regular'), local('PingFangSC-Regular'),
+    url(/assets/fonts/locale-switcher/PingFangSC-Regular-subset.woff2)
+      format('woff2');
+  unicode-range: U+20, U+4e2d, U+4f53, U+53f0, U+570b, U+5927, U+6587, U+6e2f,
+    U+6fb3, U+7063, U+7b80, U+7c21, U+7e41, U+7f8e, U+9580, U+9678, U+9999,
+    U+9ad4;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher PingFang TC;
+  font-style: normal;
+  font-weight: 400;
+  src: local('PingFang TC Regular'), local('PingFangTC-Regular'),
+    url(/assets/fonts/locale-switcher/PingFangTC-Regular-subset.woff2)
+      format('woff2');
+  unicode-range: U+20, U+4e2d, U+4f53, U+53f0, U+570b, U+5927, U+6587, U+6e2f,
+    U+6fb3, U+7063, U+7b80, U+7c21, U+7e41, U+7f8e, U+9580, U+9678, U+9999,
+    U+9ad4;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kohinoor Devanagari Regular'), local('KohinoorDevanagari-Regular'),
+    url(/assets/fonts/locale-switcher/KohinoorDevanagari-Regular-subset.woff2)
+      format('woff2');
+  unicode-range: U+924, U+92d, U+930, U+93e;
+}
+@font-face {
+  font-display: swap;
+  font-family: Locale Switcher;
+  font-style: normal;
+  font-weight: 400;
+  src: local('Thonburi'), local('Thonburi'),
+    url(/assets/fonts/locale-switcher/https:/fonts.gstatic.com/l/\2026)
+      format('woff2');
+  unicode-range: U+e17, U+e22, U+e44;
+}
+body {
+  background-color: var(--pageBG);
+  cursor: default;
+  overflow: hidden;
+}
+body,
+html {
+  min-height: 100%;
+}
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+[dir='rtl'] h1[dir='ltr'],
+[dir='rtl'] h2[dir='ltr'],
+[dir='rtl'] h3[dir='ltr'],
+[dir='rtl'] h4[dir='ltr'],
+[dir='rtl'] h5[dir='ltr'],
+[dir='rtl'] h6[dir='ltr'],
+[dir='rtl'] ul[dir='ltr'] {
+  direction: ltr;
+  text-align: initial;
+}
+[dir='ltr'] h1[dir='rtl'],
+[dir='ltr'] h2[dir='rtl'],
+[dir='ltr'] h3[dir='rtl'],
+[dir='ltr'] h4[dir='rtl'],
+[dir='ltr'] h5[dir='rtl'],
+[dir='ltr'] h6[dir='rtl'],
+[dir='ltr'] ul[dir='rtl'] {
+  direction: rtl;
+  text-align: initial;
+}
+[dir='rtl'] span[dir='ltr'] {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+[dir='ltr'] span[dir='rtl'] {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+:focus {
+  outline: 4px solid rgba(var(--keyColor-rgb), 0.6);
+  outline-offset: 1px;
+}
+@supports selector(:focus-visible) {
+  :focus {
+    outline: 0;
+  }
+  :focus-visible {
+    outline: 4px solid rgba(var(--keyColor-rgb), 0.6);
+    outline-offset: 1px;
+  }
+}
+[type='button']:focus,
+button:focus {
+  box-shadow: 0 0 0 4px rgba(var(--keyColor-rgb), 0.6);
+  outline: 0;
+}
+@supports selector(:focus-visible) {
+  [type='button']:focus,
+  a:focus,
+  button:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+  [type='button']:focus-visible,
+  a:focus-visible,
+  button:focus-visible {
+    box-shadow: 0 0 0 4px rgba(var(--keyColor-rgb), 0.6);
+    outline: 0;
+  }
+}
+[draggable='true'] {
+  -webkit-user-drag: element;
+}
+[data-drop-area]:not(.drop-reset).is-drag-over {
+  box-shadow: inset 0 0 0 4px rgba(var(--keyColor-rgb), 0.6);
+  outline: 0;
+}
+[data-drop-area]:not(.drop-reset).is-drag-over-bottom,
+[data-drop-area]:not(.drop-reset).is-drag-over-left,
+[data-drop-area]:not(.drop-reset).is-drag-over-right,
+[data-drop-area]:not(.drop-reset).is-drag-over-top {
+  position: relative;
+}
+[data-drop-area]:not(.drop-reset).is-drag-over-bottom:after,
+[data-drop-area]:not(.drop-reset).is-drag-over-left:after,
+[data-drop-area]:not(.drop-reset).is-drag-over-right:after,
+[data-drop-area]:not(.drop-reset).is-drag-over-top:after {
+  background-color: var(--keyColor);
+  content: '';
+  position: absolute;
+  z-index: 4;
+}
+[data-drop-area]:not(.drop-reset).is-drag-over-bottom:after,
+[data-drop-area]:not(.drop-reset).is-drag-over-top:after {
+  height: 2px;
+  width: 100%;
+}
+:global(html[dir='ltr'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-bottom:after,
+:global(html[dir='ltr'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-top:after {
+  left: 0;
+}
+:global(html[dir='rtl'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-bottom:after,
+:global(html[dir='rtl'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-top:after {
+  right: 0;
+}
+[data-drop-area]:not(.drop-reset).is-drag-over-top:after {
+  top: 0;
+  transform: translateY(-1px);
+}
+[data-drop-area]:not(.drop-reset).is-drag-over-bottom:after {
+  bottom: 0;
+  transform: translateY(1px);
+}
+[data-drop-area]:not(.drop-reset).is-drag-over-left:after,
+[data-drop-area]:not(.drop-reset).is-drag-over-right:after {
+  height: 100%;
+  top: 0;
+  width: 2px;
+}
+:global(html[dir='ltr'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-right:after {
+  right: -1px;
+}
+:global(html[dir='rtl'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-right:after {
+  left: -1px;
+}
+:global(html[dir='ltr'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-left:after {
+  left: -1px;
+}
+:global(html[dir='rtl'])
+  [data-drop-area]:not(.drop-reset).is-drag-over-left:after {
+  right: -1px;
+}
+:root {
+  --web-navigation-width: 164px;
+}
+@media only screen and (min-width: 484px) {
+  :root {
+    --web-navigation-width: 33.8843vw;
+  }
+}
+@media only screen and (min-width: 767.31707px) {
+  :root {
+    --web-navigation-width: 260px;
+  }
+}
+:root {
+  --bodyGutter: 25px;
+}
+@media only screen and (min-width: 1000px) {
+  :root {
+    --bodyGutter: 40px;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  @media only screen and (prefers-color-scheme: dark) {
+    .context-menu-item.svelte-1q0pfxk.svelte-1q0pfxk {
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  @media only screen and (prefers-color-scheme: dark) {
+    .context-menu-item.group-item.svelte-1q0pfxk.svelte-1q0pfxk {
+      border-bottom: none;
+    }
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  @media only screen and (prefers-color-scheme: dark) {
+    .context-menu-group.svelte-entent {
+      border-bottom-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .context-menu.svelte-xzzpfu {
+    -webkit-backdrop-filter: blur(60px) saturate(210%);
+    backdrop-filter: blur(60px) saturate(210%);
+    background-color: var(--systemStandardThickMaterialSover);
+  }
+  @media (prefers-color-scheme: dark) {
+    .context-menu.svelte-xzzpfu {
+      -webkit-backdrop-filter: saturate(60px) blur(220%);
+      backdrop-filter: saturate(60px) blur(220%);
+    }
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .context-menu.svelte-xzzpfu {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: var(--systemStandardThickMaterialSover-default_IC);
+  }
+}
+@supports (-webkit-box-reflect: initial) {
+  .artwork-component--top-rounded-secondary.svelte-sgtohc.svelte-sgtohc {
+    -webkit-box-reflect: below;
+    overflow: visible;
+  }
+  .artwork-component--top-rounded-secondary.svelte-sgtohc.svelte-sgtohc:after {
+    box-shadow: none;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .artwork-component--top-rounded-secondary.svelte-sgtohc.svelte-sgtohc {
+    -webkit-box-reflect: initial;
+    overflow: hidden;
+  }
+}
+amp-contextual-menu {
+  --ctxmenu-item-bg: var(--systemStandardThickMaterialSover-default_IC);
+  --ctxmenu-item-bg-hover: var(--systemQuinary);
+  --borderRule: var(--vibrantDivider, rgba(0, 0, 0, 0.15));
+  --ctxmenu-item-min-width: 185px;
+  --ctxmenu-z-index: 9951;
+  --ctxmenu-scrim-z-index: 9950;
+  --keyColor-focus-color: rgba(var(--keyColor-rgb), 0.6);
+  position: relative;
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .more-button--material.svelte-1dvvmpz.svelte-1dvvmpz {
+    -webkit-backdrop-filter: saturate(190%) blur(60px);
+    backdrop-filter: saturate(190%) blur(60px);
+    background-color: var(--systemStandardThinMaterialSover);
+  }
+  @media (prefers-color-scheme: dark) {
+    .more-button--material.svelte-1dvvmpz.svelte-1dvvmpz {
+      -webkit-backdrop-filter: saturate(180%) blur(60px);
+      backdrop-filter: saturate(180%) blur(60px);
+    }
+  }
+}
+@supports selector(:has(:focus-visible)) {
+  amp-contextual-menu-button.svelte-1dvvmpz:focus-within
+    .more-button--material.svelte-1dvvmpz {
+    --iconCircleFill: var(--contextMenuCircleFillOverride, transparent);
+    --iconEllipsisFill: var(--contextMenuEllipsisFillOverride, #fff);
+    background-color: var(--systemStandardThinMaterialSover-default_IC);
+  }
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    amp-contextual-menu-button.svelte-1dvvmpz:focus-within
+      .more-button--material.svelte-1dvvmpz {
+      -webkit-backdrop-filter: saturate(190%) blur(60px);
+      backdrop-filter: saturate(190%) blur(60px);
+      background-color: var(--systemStandardThinMaterialSover);
+    }
+    @media (prefers-color-scheme: dark) {
+      amp-contextual-menu-button.svelte-1dvvmpz:focus-within
+        .more-button--material.svelte-1dvvmpz {
+        -webkit-backdrop-filter: saturate(180%) blur(60px);
+        backdrop-filter: saturate(180%) blur(60px);
+      }
+    }
+  }
+  @media only screen and (prefers-contrast: more) {
+    amp-contextual-menu-button.svelte-1dvvmpz:focus-within
+      .more-button--material.svelte-1dvvmpz {
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      background-color: var(--systemStandardThinMaterialSover-default_IC);
+    }
+  }
+  amp-contextual-menu-button.svelte-1dvvmpz:has(:focus-visible)
+    .more-button--material.svelte-1dvvmpz,
+  amp-contextual-menu-button.svelte-1dvvmpz:hover
+    .more-button--material.svelte-1dvvmpz {
+    --iconCircleFill: var(--contextMenuCircleHoverFill, var(--keyColor));
+    --iconEllipsisFill: var(--contextMenuEllipsisHoverFill, #fff);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: transparent;
+  }
+}
+@media only screen and (min-width: 484px) {
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    .search-suggestions.svelte-1s1cxst.svelte-1s1cxst {
+      -webkit-backdrop-filter: blur(60px) saturate(210%);
+      backdrop-filter: blur(60px) saturate(210%);
+      background-color: var(--systemStandardThickMaterialSover);
+    }
+    @media (prefers-color-scheme: dark) {
+      .search-suggestions.svelte-1s1cxst.svelte-1s1cxst {
+        -webkit-backdrop-filter: saturate(60px) blur(220%);
+        backdrop-filter: saturate(60px) blur(220%);
+      }
+    }
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  li.svelte-1s1cxst.svelte-1s1cxst:last-child {
+    margin-bottom: -7px;
+    padding-bottom: 7px;
+  }
+}
+@media only screen and (min-width: 1000px) {
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    .side-panel.svelte-a9fl9p.svelte-a9fl9p {
+      -webkit-backdrop-filter: blur(60px);
+      backdrop-filter: blur(60px);
+      background-color: var(--systemToolbarTitlebarMaterialSover);
+    }
+  }
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .side-panel.svelte-a9fl9p .side-panel-header-wrapper.svelte-a9fl9p {
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
+    background-color: var(--systemToolbarTitlebarMaterialSover);
+  }
+}
+:root {
+  --modalScrimColor: rgba(0, 0, 0, 0.45);
+  --modalBorderRadius: 10px;
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .dt-lyrics__platter.svelte-d2f1i3:after {
+    -webkit-backdrop-filter: blur(180px) saturate(1.7) brightness(70%)
+      contrast(130%);
+    backdrop-filter: blur(180px) saturate(1.7) brightness(70%) contrast(130%);
+  }
+}
+@supports not (
+  (-webkit-backdrop-filter: initial) or (backdrop-filter: initial)
+) {
+  .dt-lyrics__platter-filter-overlay.svelte-d2f1i3 {
+    -webkit-filter: blur(80px) saturate(2);
+    filter: blur(80px) saturate(2);
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .dt-lyrics__platter-filter-overlay.svelte-d2f1i3 {
+    -webkit-filter: none;
+    filter: none;
+  }
+}
+@supports not (
+  (-webkit-backdrop-filter: initial) or (backdrop-filter: initial)
+) {
+  .dt-lyrics__platter-filter-overlay-img.svelte-d2f1i3 {
+    -webkit-filter: url(#turbulence) blur(80px);
+    filter: url(#turbulence) blur(80px);
+  }
+}
+@-webkit-keyframes svelte-d2f1i3-rotation {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes svelte-d2f1i3-rotation {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes svelte-d2f1i3-rotation-ahead {
+  0% {
+    transform: rotate(270deg);
+  }
+  to {
+    transform: rotate(630deg);
+  }
+}
+@keyframes svelte-d2f1i3-rotation-ahead {
+  0% {
+    transform: rotate(270deg);
+  }
+  to {
+    transform: rotate(630deg);
+  }
+}
+@-webkit-keyframes svelte-mu0xud-nativeLaunchOutgoingPanel {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes svelte-mu0xud-nativeLaunchOutgoingPanel {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes svelte-mu0xud-nativeLaunchIncomingPanel {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes svelte-mu0xud-nativeLaunchIncomingPanel {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .explicit--chin-inline-sticky.svelte-uqyx3i svg {
+    will-change: transform;
+  }
+}
+@media only screen and (hover: hover) and (pointer: fine) {
+  @supports selector(:has(:focus-visible)) {
+    .product-lockup.svelte-21e67y.svelte-21e67y:focus-within {
+      --scrimOpacity: 0;
+    }
+    .product-lockup.has-open-menu.svelte-21e67y.svelte-21e67y,
+    .product-lockup.svelte-21e67y.svelte-21e67y:has(:focus-visible),
+    .product-lockup.svelte-21e67y.svelte-21e67y:hover {
+      --scrimOpacity: 1;
+    }
+  }
+}
+@supports selector(:has(:focus-visible)) {
+  .product-lockup__subtitle-links--multiline.product-lockup__subtitle-links--singlet.svelte-21e67y
+    .svelte-21e67y:focus-visible,
+  .product-lockup__title-link--multiline.svelte-21e67y
+    .svelte-21e67y:focus-visible {
+    box-shadow: none;
+    outline: 0;
+  }
+  .product-lockup__title-link--multiline:has(
+      :focus-visible
+    ).product-lockup__title-link.svelte-21e67y.svelte-21e67y {
+    box-shadow: 0 0 0 4px rgba(var(--keyColor-rgb), 0.6);
+    outline: 0;
+  }
+  .product-lockup__subtitle-links--multiline.product-lockup__subtitle-links--singlet:has(
+      :focus-visible
+    ).product-lockup__subtitle-links.svelte-21e67y
+    .multiline-clamp {
+    box-shadow: inset 0 0 0 4px rgba(var(--keyColor-rgb), 0.6);
+    outline: 0;
+  }
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .play-button--platter.svelte-146cb9g:not(.play-button--artwork-overlay)
+    .icon {
+    -webkit-backdrop-filter: saturate(190%) blur(60px);
+    backdrop-filter: saturate(190%) blur(60px);
+    background-color: var(--systemStandardThinMaterialSover);
+  }
+  @media (prefers-color-scheme: dark) {
+    .play-button--platter.svelte-146cb9g:not(.play-button--artwork-overlay)
+      .icon {
+      -webkit-backdrop-filter: saturate(180%) blur(60px);
+      backdrop-filter: saturate(180%) blur(60px);
+    }
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .play-button--platter.svelte-146cb9g:not(.play-button--artwork-overlay):focus
+    .icon,
+  .play-button--platter.svelte-146cb9g:not(.play-button--artwork-overlay):hover
+    .icon,
+  .play-button--platter:not(
+      .play-button--artwork-overlay
+    ).is-filled.svelte-146cb9g
+    .icon,
+  .play-button--platter:not(
+      .play-button--artwork-overlay
+    ).is-hovered.svelte-146cb9g
+    .icon {
+    background-color: var(--iconCircleFillBG);
+  }
+}
+@keyframes svelte-146cb9g-buffering-spinner {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .monogram.svelte-1sc44dw {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
+      sans-serif;
+    font-size: 310px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 0.00323;
+  }
+  .monogram.svelte-1sc44dw:lang(he) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, Arial Hebrew, SF Pro Icons, Segoe UI,
+      Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(hi) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, Kohinoor Devanagari, SF Pro Icons,
+      Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(ja) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, Hiragino Sans, SF Pro Icons,
+      Hiragino Kaku Gothic Pro, \30d2\30e9\30ae\30ce\89d2\30b4 Pro W3,
+      \30e1\30a4\30ea\30aa, Meiryo, \ff2d\ff33\ff30\30b4\30b7\30c3\30af,
+      Helvetica Neue, Helvetica, Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(ko) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, Apple SD Gothic Neo, SF Pro Icons, Apple Gothic,
+      HY Gulim, MalgunGothic, HY Dotum, Lexi Gulim, Helvetica Neue, Helvetica,
+      Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(th) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, Thonburi Pro, SF Pro Icons, Helvetica Neue,
+      Helvetica, Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(zh-CN) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, PingFang SC, SF Pro Icons, Helvetica Neue,
+      Helvetica, Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(zh-HK),
+  .monogram.svelte-1sc44dw:lang(zh-MO) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, PingFang HK, SF Pro Icons, Helvetica Neue,
+      Helvetica, Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(zh-TW) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, PingFang TC, SF Pro Icons, Helvetica Neue,
+      Helvetica, Arial, sans-serif;
+  }
+  .monogram.svelte-1sc44dw:lang(ar) {
+    font-family: ui-rounded, -apple-system, BlinkMacSystemFont,
+      Apple Color Emoji, SF Pro, SF Pro Icons, Segoe UI, Helvetica Neue,
+      Helvetica, Arial, sans-serif;
+  }
+}
+@media only screen and (hover: hover) and (pointer: fine) {
+  @supports selector(:has(:focus-visible)) {
+    .vertical-video.svelte-1puvsf7.svelte-1puvsf7:focus-within {
+      --scrimOpacity: 0;
+    }
+    .vertical-video.has-open-menu.svelte-1puvsf7.svelte-1puvsf7,
+    .vertical-video.svelte-1puvsf7.svelte-1puvsf7:has(:focus-visible),
+    .vertical-video.svelte-1puvsf7.svelte-1puvsf7:hover {
+      --scrimOpacity: 1;
+    }
+  }
+}
+@keyframes svelte-1szwrlo-playback-bar {
+  0% {
+    transform: translateY(9px);
+  }
+  to {
+    transform: translateY(var(--max-height-offset));
+  }
+}
+@keyframes svelte-1szwrlo-playback-bar-iconic {
+  0% {
+    transform: translateY(9px);
+  }
+  50% {
+    transform: translateY(var(--iconic-midpoint-height-offset));
+  }
+  to {
+    transform: translateY(var(--iconic-height-offset));
+  }
+}
+@keyframes svelte-1szwrlo-playback-bar-refocus {
+  0% {
+    transform: translateY(var(--iconic-height-offset));
+  }
+  to {
+    transform: translateY(var(--max-height-offset));
+  }
+}
+@-webkit-keyframes svelte-1tvhpc2-fadeOut {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes svelte-1tvhpc2-fadeOut {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes svelte-1tvhpc2-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes svelte-1tvhpc2-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@-webkit-keyframes svelte-1tvhpc2-addToSpinner {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes svelte-1tvhpc2-addToSpinner {
+  to {
+    transform: rotate(1turn);
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .track-lockup.svelte-mtpuku.svelte-mtpuku {
+    display: flex;
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .track-lockup__content.svelte-mtpuku.svelte-mtpuku {
+    flex-grow: 1;
+  }
+}
+@supports (
+  (-webkit-mask: linear-gradient(white, black)) or
+    (mask: linear-gradient(white, black))
+) {
+  .top-search-lockup__lyrics.svelte-1peadgz.svelte-1peadgz,
+  .top-search-lockup__primary.svelte-1peadgz.svelte-1peadgz,
+  .top-search-lockup__secondary.svelte-1peadgz.svelte-1peadgz {
+    -webkit-mask: linear-gradient(270deg, transparent, #000 36px);
+    mask: linear-gradient(270deg, transparent, #000 36px);
+    -webkit-mask-position: right;
+    mask-position: right;
+    position: relative;
+    text-overflow: clip;
+    z-index: 1;
+  }
+  html[dir='rtl'] .top-search-lockup__lyrics.svelte-1peadgz.svelte-1peadgz,
+  html[dir='rtl'] .top-search-lockup__primary.svelte-1peadgz.svelte-1peadgz,
+  html[dir='rtl'] .top-search-lockup__secondary.svelte-1peadgz.svelte-1peadgz {
+    -webkit-mask: linear-gradient(-270deg, transparent, #000 36px);
+    mask: linear-gradient(-270deg, transparent, #000 36px);
+  }
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .accessory-badge-wrapper.is-future.svelte-5slm25 {
+    -webkit-backdrop-filter: saturate(190%) blur(60px);
+    backdrop-filter: saturate(190%) blur(60px);
+    background-color: rgba(245, 245, 245, 0.48);
+  }
+  @media (prefers-color-scheme: dark) {
+    .accessory-badge-wrapper.is-future.svelte-5slm25 {
+      -webkit-backdrop-filter: saturate(180%) blur(60px);
+      backdrop-filter: saturate(180%) blur(60px);
+    }
+  }
+}
+@media only screen and (hover: hover) and (pointer: fine) {
+  @supports selector(:has(:focus-visible)) {
+    .powerswoosh.svelte-1n8g7mf.svelte-1n8g7mf:focus-within {
+      --scrimOpacity: 0;
+    }
+    .powerswoosh.has-open-menu.svelte-1n8g7mf.svelte-1n8g7mf,
+    .powerswoosh.svelte-1n8g7mf.svelte-1n8g7mf:has(:focus-visible),
+    .powerswoosh.svelte-1n8g7mf.svelte-1n8g7mf:hover {
+      --scrimOpacity: 1;
+    }
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__chin.svelte-1n8g7mf {
+    overflow: visible;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__chin.svelte-1n8g7mf {
+    overflow: hidden;
+  }
+}
+@supports (-moz-appearance: meterbar) {
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__chin.svelte-1n8g7mf {
+    overflow: hidden;
+  }
+}
+@supports (-webkit-box-reflect: initial) {
+  .powerswoosh.svelte-1n8g7mf.svelte-1n8g7mf:not(.powerswoosh--superhero) {
+    background-image: var(--background-image);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 99%;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork.svelte-1n8g7mf {
+    -webkit-box-reflect: below;
+    box-shadow: none;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__chin.svelte-1n8g7mf {
+    -webkit-backdrop-filter: saturate(140%) blur(70px);
+    backdrop-filter: saturate(140%) blur(70px);
+    background: var(--lockupChinScrim);
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    left: 0;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf,
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    right: 0;
+  }
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    left: 0;
+  }
+}
+@supports not (-webkit-box-reflect: below) {
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    background-image: var(--background-image);
+    background-position: bottom;
+    background-size: cover;
+    bottom: 0;
+    filter: saturate(140%);
+    position: absolute;
+    top: 0;
+    transform: scaleY(-1);
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    left: 0;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf,
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    right: 0;
+  }
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    left: 0;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    background-color: var(--lockupChinScrim);
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    left: 0;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before,
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    right: 0;
+  }
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    left: 0;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    border-radius: 14px 14px 0 0;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:after {
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: inherit;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    opacity: var(--scrimOpacity, 0);
+    position: absolute;
+    top: 0;
+    transition: opacity 0.1s ease-in;
+    width: 100%;
+    z-index: 1;
+  }
+  .powerswoosh.svelte-1n8g7mf
+    .powerswoosh:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    box-shadow: none;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork.svelte-1n8g7mf {
+    -webkit-box-reflect: initial;
+    overflow: hidden;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__chin.svelte-1n8g7mf {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: 0 0;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    background-image: var(--background-image);
+    background-position: bottom;
+    background-size: cover;
+    bottom: 0;
+    filter: saturate(140%);
+    position: absolute;
+    top: 0;
+    transform: scaleY(-1);
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    left: 0;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf,
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    right: 0;
+  }
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    left: 0;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    background-color: var(--lockupChinScrim);
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    left: 0;
+  }
+  html[dir='ltr']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before,
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    right: 0;
+  }
+  html[dir='rtl']
+    .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    left: 0;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:before {
+    border-radius: 14px 14px 0 0;
+  }
+  .powerswoosh.svelte-1n8g7mf:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf:after {
+    background-color: rgba(51, 51, 51, 0.3);
+    border-radius: inherit;
+    content: '';
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    opacity: var(--scrimOpacity, 0);
+    position: absolute;
+    top: 0;
+    transition: opacity 0.1s ease-in;
+    width: 100%;
+    z-index: 1;
+  }
+  .powerswoosh.svelte-1n8g7mf
+    .powerswoosh:not(.powerswoosh--superhero)
+    .powerswoosh__artwork-blur.svelte-1n8g7mf {
+    box-shadow: none;
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .powerswoosh--superhero.svelte-1n8g7mf:has(video)
+    .powerswoosh__chin--legibility-gradient.svelte-1n8g7mf {
+    will-change: opacity;
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .app-container.is-refocused
+    .artist-header--video
+    .artwork-container.svelte-zwojlk
+    .artwork-component__image {
+    will-change: opacity;
+  }
+}
+@supports (-webkit-box-reflect: initial) {
+  .horizontal-poster-lockup__lockup-container.svelte-1jd61n.svelte-1jd61n {
+    background-image: var(--background-image);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 99%;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .horizontal-poster-lockup__artwork-container.svelte-1jd61n.svelte-1jd61n {
+    -webkit-box-reflect: below;
+  }
+  .horizontal-poster-lockup__chin.svelte-1jd61n.svelte-1jd61n {
+    -webkit-backdrop-filter: saturate(140%) blur(70px);
+    backdrop-filter: saturate(140%) blur(70px);
+    background-color: var(--lockupChinScrim);
+    z-index: 2;
+  }
+  .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    display: none;
+  }
+  .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n,
+  .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:after {
+    border-radius: 10px 10px 0 0;
+  }
+}
+@supports not (-webkit-box-reflect: below) {
+  .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    background-image: var(--background-image);
+    background-position: bottom;
+    background-size: cover;
+    bottom: 0;
+    -webkit-filter: saturate(140%);
+    filter: saturate(140%);
+    position: absolute;
+    top: 0;
+    transform: scaleY(-1);
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    left: 0;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n,
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    right: 0;
+  }
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    left: 0;
+  }
+  .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    background-color: var(--lockupChinScrim);
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    left: 0;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before,
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    right: 0;
+  }
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    left: 0;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .horizontal-poster-lockup__chin.svelte-1jd61n.svelte-1jd61n {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: 0 0;
+    z-index: 1;
+  }
+  .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    background-image: var(--background-image);
+    background-position: bottom;
+    background-size: cover;
+    bottom: 0;
+    display: block;
+    -webkit-filter: saturate(140%);
+    filter: saturate(140%);
+    position: absolute;
+    top: 0;
+    transform: scaleY(-1);
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    left: 0;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n,
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    right: 0;
+  }
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n {
+    left: 0;
+  }
+  .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    background-color: var(--lockupChinScrim);
+    bottom: 0;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    left: 0;
+  }
+  html[dir='ltr']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before,
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    right: 0;
+  }
+  html[dir='rtl']
+    .horizontal-poster-lockup__artwork-blur.svelte-1jd61n.svelte-1jd61n:before {
+    left: 0;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .select.svelte-11wt6hw {
+    transform: translateY(1px);
+  }
+}
+@media only screen and (hover: hover) and (pointer: fine) {
+  @supports selector(:has(:focus-visible)) {
+    .artwork-wrapper.svelte-1fdlvtg.svelte-1fdlvtg:focus-within {
+      --scrimOpacity: 0;
+    }
+    .artwork-wrapper.has-open-menu.svelte-1fdlvtg.svelte-1fdlvtg,
+    .artwork-wrapper.svelte-1fdlvtg.svelte-1fdlvtg:has(:focus-visible),
+    .artwork-wrapper.svelte-1fdlvtg.svelte-1fdlvtg:hover {
+      --scrimOpacity: 1;
+    }
+  }
+}
+@supports (-webkit-marquee-repetition: infinite) and
+  ((-o-object-fit: fill) or (object-fit: fill)) {
+  @supports (-webkit-appearance: none) {
+    @media only screen and (max-width: 999px) {
+      .shelf-grid__body.svelte-1yzpvez.svelte-1yzpvez {
+        display: grid;
+      }
+    }
+  }
+}
+@supports (-webkit-marquee-repetition: infinite) and
+  ((-o-object-fit: fill) or (object-fit: fill)) {
+  @supports (-webkit-appearance: none) {
+    .shelf-grid__list-item.svelte-1yzpvez.svelte-1yzpvez {
+      min-width: 0;
+    }
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .grid-item.svelte-1p1n7nd.svelte-1p1n7nd {
+    min-width: 0;
+  }
+}
+:root {
+  --lines: 4;
+  --line-height: 16;
+  --link-length: 4;
+}
+[slot='artwork'] {
+  border-radius: 10px;
+  box-shadow: 0 10px 20px 0 var(--radiosityShadowColor);
+  grid-area: artwork;
+  margin: 15px auto 0;
+  position: relative;
+  width: 270px;
+  z-index: 1;
+  z-index: 1001;
+}
+[slot='artwork']:after {
+  box-shadow: none;
+}
+@media only screen and (min-width: 1000px) {
+  [slot='artwork'] {
+    margin-top: 0;
+  }
+  html[dir='ltr'] [slot='artwork'] {
+    margin-right: 34px;
+  }
+  html[dir='rtl'] [slot='artwork'] {
+    margin-left: 34px;
+  }
+}
+@media only screen and (hover: hover) and (pointer: fine) {
+  @supports selector(:has(:focus-visible)) {
+    .super-hero-lockup.svelte-1vqnn17:focus-within {
+      --scrimOpacity: 0;
+    }
+    .super-hero-lockup.has-open-menu.svelte-1vqnn17,
+    .super-hero-lockup.svelte-1vqnn17:has(:focus-visible),
+    .super-hero-lockup.svelte-1vqnn17:hover {
+      --scrimOpacity: 1;
+    }
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .artist-header--fixed.svelte-wdfu34.svelte-wdfu34 {
+    -webkit-clip-path: inset(-54px 0 0 0);
+    clip-path: inset(-54px 0 0 0);
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .app-container.is-refocused
+    .artist-header--fixed.svelte-wdfu34.svelte-wdfu34 {
+    opacity: 0.9999;
+    will-change: opacity;
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .artist-header__name-container.svelte-wdfu34.svelte-wdfu34 {
+    transform: translate(0);
+    z-index: 1001;
+  }
+}
+@supports (
+  (-webkit-mask: linear-gradient(white, black)) or
+    (mask: linear-gradient(white, black))
+) {
+  .artist-header__name.svelte-wdfu34.svelte-wdfu34 {
+    -webkit-mask: linear-gradient(270deg, transparent, #000 36px);
+    mask: linear-gradient(270deg, transparent, #000 36px);
+    -webkit-mask-position: right;
+    mask-position: right;
+    position: relative;
+    z-index: 1;
+  }
+  html[dir='rtl'] .artist-header__name.svelte-wdfu34.svelte-wdfu34 {
+    -webkit-mask: linear-gradient(-270deg, transparent, #000 36px);
+    mask: linear-gradient(-270deg, transparent, #000 36px);
+  }
+}
+@media only screen and (min-width: 1000px) {
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    .artist-header--fixed.svelte-wdfu34
+      .artist-header__favorite-button.svelte-wdfu34 {
+      -webkit-backdrop-filter: saturate(190%) blur(60px);
+      backdrop-filter: saturate(190%) blur(60px);
+      background-color: rgba(40, 40, 40, 0.5);
+    }
+    @media (prefers-color-scheme: dark) {
+      .artist-header--fixed.svelte-wdfu34
+        .artist-header__favorite-button.svelte-wdfu34 {
+        -webkit-backdrop-filter: saturate(180%) blur(60px);
+        backdrop-filter: saturate(180%) blur(60px);
+      }
+    }
+  }
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .artist-header--video.svelte-wdfu34
+    .artist-header__favorite-button.svelte-wdfu34 {
+    -webkit-backdrop-filter: saturate(190%) blur(60px);
+    backdrop-filter: saturate(190%) blur(60px);
+    background-color: rgba(40, 40, 40, 0.5);
+  }
+  @media (prefers-color-scheme: dark) {
+    .artist-header--video.svelte-wdfu34
+      .artist-header__favorite-button.svelte-wdfu34 {
+      -webkit-backdrop-filter: saturate(180%) blur(60px);
+      backdrop-filter: saturate(180%) blur(60px);
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    .artist-header--fixed.svelte-wdfu34
+      .artist-header__context-menu.svelte-wdfu34
+      .more-button {
+      -webkit-backdrop-filter: saturate(190%) blur(60px);
+      backdrop-filter: saturate(190%) blur(60px);
+      background-color: rgba(40, 40, 40, 0.5);
+    }
+    @media (prefers-color-scheme: dark) {
+      .artist-header--fixed.svelte-wdfu34
+        .artist-header__context-menu.svelte-wdfu34
+        .more-button {
+        -webkit-backdrop-filter: saturate(180%) blur(60px);
+        backdrop-filter: saturate(180%) blur(60px);
+      }
+    }
+  }
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .artist-header--video.svelte-wdfu34
+    .artist-header__context-menu.svelte-wdfu34
+    .more-button {
+    -webkit-backdrop-filter: saturate(190%) blur(60px);
+    backdrop-filter: saturate(190%) blur(60px);
+    background-color: rgba(40, 40, 40, 0.5);
+  }
+  @media (prefers-color-scheme: dark) {
+    .artist-header--video.svelte-wdfu34
+      .artist-header__context-menu.svelte-wdfu34
+      .more-button {
+      -webkit-backdrop-filter: saturate(180%) blur(60px);
+      backdrop-filter: saturate(180%) blur(60px);
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  @supports (-webkit-tap-highlight-color: currentcolor) and
+    (not (-webkit-background-composite: clear)) and
+    (not (-ms-accelerator: true)) and (not (overflow: -webkit-marquee)) and
+    (not (-moz-appearance: none)) {
+    .tv-movie-header.svelte-17wzwaz.svelte-17wzwaz {
+      position: relative;
+      z-index: 11;
+    }
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  html[dir='ltr']
+    .library-track.svelte-ug841.svelte-ug841:not(.library-track--header) {
+    padding-right: 0;
+  }
+  html[dir='rtl']
+    .library-track.svelte-ug841.svelte-ug841:not(.library-track--header) {
+    padding-left: 0;
+  }
+  html[dir='ltr']
+    .library-track.svelte-ug841.svelte-ug841:not(.library-track--header) {
+    margin-right: var(--bodyGutter);
+  }
+  html[dir='rtl']
+    .library-track.svelte-ug841.svelte-ug841:not(.library-track--header) {
+    margin-left: var(--bodyGutter);
+  }
+  .library-track:not(
+      .library-track--header
+    ).selected.svelte-ug841.svelte-ug841 {
+    box-shadow: var(--bodyGutter) 0 0 var(--selectionColor);
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  html[dir='ltr']
+    .library-track.svelte-12x81ne.svelte-12x81ne:not(.library-track--header) {
+    padding-right: 0;
+  }
+  html[dir='rtl']
+    .library-track.svelte-12x81ne.svelte-12x81ne:not(.library-track--header) {
+    padding-left: 0;
+  }
+  html[dir='ltr']
+    .library-track.svelte-12x81ne.svelte-12x81ne:not(.library-track--header) {
+    margin-right: var(--bodyGutter);
+  }
+  html[dir='rtl']
+    .library-track.svelte-12x81ne.svelte-12x81ne:not(.library-track--header) {
+    margin-left: var(--bodyGutter);
+  }
+  .library-track:not(
+      .library-track--header
+    ).selected.svelte-12x81ne.svelte-12x81ne {
+    box-shadow: var(--bodyGutter) 0 0 var(--selectionColor);
+  }
+}
+@supports selector(:has(:focus-visible)) {
+  .songs-list-row.svelte-4druit.svelte-4druit:not(
+      .songs-list-row--disabled
+    ):focus-within {
+    --playButtonOpacity: 0;
+    --addToLibraryOpacity: 0;
+  }
+  .songs-list-row.svelte-4druit.svelte-4druit:not(
+      .songs-list-row--disabled
+    ):focus-visible,
+  .songs-list-row.svelte-4druit.svelte-4druit:not(
+      .songs-list-row--disabled
+    ):has(:focus-visible),
+  .songs-list-row.svelte-4druit.svelte-4druit:not(
+      .songs-list-row--disabled
+    ):hover {
+    --playButtonOpacity: 1;
+    --addToLibraryOpacity: 1;
+  }
+}
+@supports (-webkit-tap-highlight-color: currentcolor) and
+  (not (-webkit-background-composite: clear)) and (not (-ms-accelerator: true))
+  and (not (overflow: -webkit-marquee)) and (not (-moz-appearance: none)) {
+  .songs-list-row.svelte-4druit:nth-of-type(2n)
+    .songs-list__col--heart-and-star.svelte-4druit {
+    background-color: rgba(255, 255, 255, 0.576);
+  }
+  @media only screen and (prefers-color-scheme: dark) {
+    .songs-list-row.svelte-4druit:nth-of-type(2n)
+      .songs-list__col--heart-and-star.svelte-4druit {
+      background-color: rgba(32, 32, 32, 0.576);
+    }
+  }
+  .songs-list-row.svelte-4druit:not(.songs-list-row--selected):hover
+    .songs-list__col--heart-and-star.svelte-4druit {
+    background-color: rgba(250, 250, 250, 0.596);
+  }
+  @media only screen and (prefers-color-scheme: dark) {
+    .songs-list-row.svelte-4druit:not(.songs-list-row--selected):hover
+      .songs-list__col--heart-and-star.svelte-4druit {
+      background-color: rgba(36, 36, 36, 0.596);
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  @supports (-webkit-tap-highlight-color: currentcolor) and
+    (not (-webkit-background-composite: clear)) and
+    (not (-ms-accelerator: true)) and (not (overflow: -webkit-marquee)) and
+    (not (-moz-appearance: none)) {
+    html[dir='rtl']
+      .songs-list__header-col--heart-and-star.svelte-byjade
+      .songs-list__header-col-label.svelte-byjade {
+      height: 32px;
+      position: absolute;
+      right: -47px;
+      top: 0;
+      width: 100vw;
+      z-index: 1;
+    }
+    @media only screen and (min-width: 1940px) {
+      html[dir='rtl']
+        .songs-list__header-col--heart-and-star.svelte-byjade
+        .songs-list__header-col-label.svelte-byjade {
+        right: calc(-50vw + 930px);
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1000px) {
+  @supports (-webkit-tap-highlight-color: currentcolor) and
+    (not (-webkit-background-composite: clear)) and
+    (not (-ms-accelerator: true)) and (not (overflow: -webkit-marquee)) and
+    (not (-moz-appearance: none)) {
+    .section.with-pinned-item.svelte-1g7ob8i .section-content.svelte-1g7ob8i {
+      width: 0;
+    }
+  }
+}
+@keyframes svelte-1qzpsjg-fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes svelte-1qzpsjg-spinner-line-fade-default {
+  0%,
+  to {
+    opacity: 0.55;
+  }
+  95% {
+    opacity: 0.08;
+  }
+  1% {
+    opacity: 0.55;
+  }
+}
+@keyframes svelte-1qzpsjg-spinner-line-fade-increased-contrast {
+  0%,
+  to {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.1;
+  }
+  1% {
+    opacity: 0.8;
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .lyrics-sharing__modal.svelte-1v5pjal.svelte-1v5pjal:before {
+    will-change: opacity;
+  }
+}
+@media only screen and (min-width: 484px) {
+  @supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+    .search-scope-bar.svelte-sixb6a.svelte-sixb6a {
+      -webkit-backdrop-filter: blur(60px);
+      backdrop-filter: blur(60px);
+      background-color: var(--systemHeaderMaterialSover);
+    }
+  }
+}
+@-webkit-keyframes svelte-sixb6a-segmentedControlSlideInLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+@keyframes svelte-sixb6a-segmentedControlSlideInLeft {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+@-webkit-keyframes svelte-sixb6a-segmentedControlSlideInRight {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+@keyframes svelte-sixb6a-segmentedControlSlideInRight {
+  0% {
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+@supports (
+  (-webkit-mask: linear-gradient(white, black)) or
+    (mask: linear-gradient(white, black))
+) {
+  .search-tablist.svelte-caslts {
+    -webkit-mask: linear-gradient(
+      270deg,
+      transparent 0,
+      transparent calc(var(--bodyGutter) / 2),
+      #000 var(--bodyGutter)
+    );
+    mask: linear-gradient(
+      270deg,
+      transparent 0,
+      transparent calc(var(--bodyGutter) / 2),
+      #000 var(--bodyGutter)
+    );
+    -webkit-mask-position: right;
+    mask-position: right;
+    position: relative;
+    z-index: 1;
+  }
+  html[dir='rtl'] .search-tablist.svelte-caslts {
+    -webkit-mask: linear-gradient(
+      -270deg,
+      transparent 0,
+      transparent calc(var(--bodyGutter) / 2),
+      #000 var(--bodyGutter)
+    );
+    mask: linear-gradient(
+      -270deg,
+      transparent 0,
+      transparent calc(var(--bodyGutter) / 2),
+      #000 var(--bodyGutter)
+    );
+  }
+}
+@supports ((-webkit-backdrop-filter: initial) or (backdrop-filter: initial)) {
+  .error-modal__container.svelte-gb2q8m {
+    -webkit-backdrop-filter: blur(60px) saturate(210%);
+    backdrop-filter: blur(60px) saturate(210%);
+    background-color: var(--systemStandardThickMaterialSover);
+  }
+  @media (prefers-color-scheme: dark) {
+    .error-modal__container.svelte-gb2q8m {
+      -webkit-backdrop-filter: saturate(60px) blur(220%);
+      backdrop-filter: saturate(60px) blur(220%);
+    }
+  }
+}
+@keyframes svelte-gb2q8m-modalZoomIn {
+  0% {
+    opacity: 0;
+    transform: scale3d(0, 0, 0);
+  }
+}
+@keyframes svelte-gb2q8m-modalFadeIn {
+  0% {
+    opacity: 0;
+  }
+}
+@supports (background-image: -webkit-named-image(apple-pay-logo-black)) or
+  (-webkit-appearance: -apple-pay-button) {
+  .drag-image.svelte-1cqzgqi.svelte-1cqzgqi {
+    z-index: 51;
+  }
+  .drag-image.svelte-1cqzgqi.svelte-1cqzgqi.preset {
+    left: -47px;
+    overflow: hidden;
+    top: -47px;
+  }
+  .drag-image.svelte-1cqzgqi.svelte-1cqzgqi.preset.drag-image--container {
+    left: -63px;
+    top: -63px;
+  }
+  .drag-image.svelte-1cqzgqi.svelte-1cqzgqi.visible {
+    left: 0;
+    top: 0;
+  }
+}

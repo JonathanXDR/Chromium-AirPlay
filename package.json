@@ -1,0 +1,24 @@
+{
+  "name": "chromium-airplay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "background.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonathanXDR/Chromium-AirPlay.git"
+  },
+  "author": "Jonathan Russ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanXDR/Chromium-AirPlay/issues"
+  },
+  "homepage": "https://github.com/JonathanXDR/Chromium-AirPlay#readme",
+  "dependencies": {
+    "airplay": "^0.0.3",
+    "airplay-js": "^0.3.0",
+    "mdns": "^2.7.2"
+  }
+}
