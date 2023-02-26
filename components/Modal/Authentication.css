@@ -1,0 +1,126 @@
+.link:disabled {
+  pointer-events: none;
+}
+.theme-podcastsconnect .link,
+.theme-podcastsconnect.theme-dark .link {
+  color: #7d50df;
+}
+.theme-music .link {
+  color: #da0f47;
+}
+.page-container {
+  width: 100%;
+  margin: 0 auto;
+}
+.page-container--narrow {
+  max-width: 480px;
+}
+.page-container--full-height {
+  height: 100%;
+}
+.page-container--padded {
+  padding: 2rem 1rem;
+}
+.page-container--padded.page-container--modal {
+  padding: 50px 40px 20px;
+}
+.page-container--padded.page-container--modal.page-container--full-height {
+  padding-bottom: 30px;
+}
+.idms-login[data-v-f2151a9c] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+.idms-login__custom-content-container[data-v-f2151a9c] {
+  margin: auto;
+  position: absolute;
+  bottom: 58%;
+  width: 100%;
+}
+.idms-login__apple-icon[data-v-f2151a9c] {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+.idms-login__header[data-v-f2151a9c] {
+  font-size: 1.4rem;
+}
+.idms-login__body[data-v-f2151a9c] {
+  padding: 0 5rem;
+}
+.idms-login__auth-container[data-v-f2151a9c] {
+  min-width: 640px;
+  min-height: 480px;
+  padding-top: 70px;
+  position: relative;
+  width: 100%;
+}
+.idms-login__auth-container--login-fields-hidden[data-v-f2151a9c] {
+  padding-top: 0;
+}
+.idms-login__create-link[data-v-f2151a9c],
+.idms-login__forgot-link[data-v-f2151a9c] {
+  margin: auto;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  font-size: 0.875rem;
+}
+.idms-login__create-link[data-v-f2151a9c] {
+  margin-bottom: 40px;
+  text-align: center;
+}
+.idms-login__create-link[data-v-f2151a9c]:focus {
+  outline: none;
+}
+@media only screen and (max-width: 640px) {
+  .idms-login__auth-container[data-v-f2151a9c] {
+    min-width: 360px;
+  }
+}
+@media only screen and (max-width: 359px) {
+  .idms-login__auth-container[data-v-f2151a9c] {
+    min-width: 100%;
+  }
+}
+.idms-login__apple-icon[data-v-f2151a9c] {
+  fill: #888;
+  height: 55px;
+}
+.theme-dark .idms-login__apple-icon[data-v-f2151a9c] {
+  fill: #ccc;
+}
+.theme-dark .idms-login__create-link[data-v-f2151a9c],
+.theme-dark .idms-login__forgot-link[data-v-f2151a9c] {
+  color: #2997ff;
+}
+.theme-music .idms-login__create-link[data-v-f2151a9c],
+.theme-music .idms-login__forgot-link[data-v-f2151a9c] {
+  color: #da0f47;
+}
+.theme-podcastsconnect .idms-login__create-link[data-v-f2151a9c],
+.theme-podcastsconnect .idms-login__forgot-link[data-v-f2151a9c] {
+  color: #7d50df;
+}
+.theme-dark .idms-login__body[data-v-f2151a9c],
+.theme-dark .idms-login__header[data-v-f2151a9c] {
+  color: #f5f5f7;
+}
+.idms-login__error-message[data-v-f2151a9c] {
+  color: #e30000;
+}
+.theme-dark .idms-login__error-message[data-v-f2151a9c] {
+  color: #ff3037;
+}

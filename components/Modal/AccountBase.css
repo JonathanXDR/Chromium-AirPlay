@@ -1,0 +1,502 @@
+.heading[data-v-7020ec54] {
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+.link:disabled {
+  pointer-events: none;
+}
+.theme-podcastsconnect .link,
+.theme-podcastsconnect.theme-dark .link {
+  color: #7d50df;
+}
+.theme-music .link {
+  color: #da0f47;
+}
+.cc-passcode {
+  display: flex;
+  flex-direction: column;
+}
+.cc-passcode__title {
+  margin-bottom: 1rem;
+}
+.theme-dark .cc-passcode__title {
+  color: #fff;
+}
+.cc-passcode__field:focus {
+  outline: none;
+}
+.cc-passcode__input-container {
+  display: inline-block;
+  white-space: nowrap;
+}
+.cc-passcode__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+  width: 210px;
+  height: 45px;
+}
+.cc-passcode__input:focus ~ .cc-passcode__digit--active {
+  box-shadow: 0 0 0 3px rgba(0, 112, 201, 0.4);
+}
+.cc-passcode__input:focus ~ .cc-passcode__digit--active:after {
+  box-sizing: border-box;
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  -webkit-animation: cursor-blink 1.2s infinite;
+  animation: cursor-blink 1.2s infinite;
+  height: 50%;
+  top: 25%;
+  opacity: 0;
+}
+.is-rtl .cc-passcode__input:focus ~ .cc-passcode__digit--active:after {
+  border-right: 1px solid #333;
+}
+.is-ltr .cc-passcode__input:focus ~ .cc-passcode__digit--active:after {
+  border-left: 1px solid #333;
+}
+.is-rtl .cc-passcode__input:focus ~ .cc-passcode__digit--active:after {
+  right: 50%;
+}
+.is-ltr .cc-passcode__input:focus ~ .cc-passcode__digit--active:after {
+  left: 50%;
+}
+.cc-passcode__input:focus
+  ~ .cc-passcode__digit--active.cc-passcode__digit--error {
+  box-shadow: 0 0 0 2px #de071c;
+}
+.theme-dark .cc-passcode__input:focus ~ .cc-passcode__digit--active {
+  box-shadow: 0 0 0 3px rgba(102, 187, 255, 0.4);
+}
+.theme-dark
+  .cc-passcode__input:focus
+  ~ .cc-passcode__digit--active.cc-passcode__digit--error {
+  box-shadow: 0 0 0 2px #f33;
+}
+.is-rtl
+  .theme-dark
+  .cc-passcode__input:focus
+  ~ .cc-passcode__digit--active:after {
+  border-right-color: #ccc;
+}
+.is-ltr
+  .theme-dark
+  .cc-passcode__input:focus
+  ~ .cc-passcode__digit--active:after {
+  border-left-color: #ccc;
+}
+.cc-passcode__digit {
+  position: relative;
+  display: inline-block;
+  cursor: text;
+  width: 45px;
+  height: 45px;
+  border: 1px solid #d6d6d6;
+  border-radius: 4px;
+  margin-bottom: 0.7rem;
+}
+.cc-passcode__digit:not(:first-of-type) {
+  margin-left: 0.7rem;
+}
+@media (max-width: 415px) {
+  .cc-passcode__digit:not(:first-of-type) {
+    margin-left: 6px;
+  }
+}
+.cc-passcode--mask-input .cc-passcode__digit--filled:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  width: 8px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: #333;
+  -webkit-animation: fade-in 0.3s ease-in-out;
+  animation: fade-in 0.3s ease-in-out;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+.cc-passcode__field--showchars
+  .cc-passcode--mask-input
+  .cc-passcode__digit--filled:before {
+  -webkit-animation: fade-in 0.2s ease-in-out 0.1s 1;
+  animation: fade-in 0.2s ease-in-out 0.1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.theme-dark .cc-passcode--mask-input .cc-passcode__digit--filled:before {
+  background-color: #ccc;
+}
+.cc-passcode--mask-input .cc-passcode__digit--fillcomplete:before {
+  -webkit-animation: none;
+  animation: none;
+  opacity: 1;
+}
+.cc-passcode__digit--error {
+  -webkit-animation: shake 0.5s ease both;
+  animation: shake 0.5s ease both;
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+.theme-dark .cc-passcode__digit {
+  border: 1px solid #444;
+}
+.cc-passcode__digit-display {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+  font-size: 1.5rem;
+  color: #111;
+}
+.is-rtl .cc-passcode__digit-display {
+  right: 0;
+}
+.is-ltr .cc-passcode__digit-display,
+.is-rtl .cc-passcode__digit-display {
+  left: 0;
+}
+.is-ltr .cc-passcode__digit-display {
+  right: 0;
+}
+.cc-passcode--mask-input .cc-passcode__digit-display {
+  -webkit-animation: fade-out 0.1s ease-in-out 0.1s 1;
+  animation: fade-out 0.1s ease-in-out 0.1s 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.cc-passcode--mask-input
+  .cc-passcode__digit--fillcomplete
+  .cc-passcode__digit-display {
+  opacity: 0;
+  -webkit-animation: none;
+  animation: none;
+}
+.theme-dark .cc-passcode__digit-display {
+  color: #fff;
+}
+.cc-passcode__verifying {
+  position: absolute;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  margin-top: 0.3rem;
+}
+.is-rtl .cc-passcode__verifying {
+  padding-right: 0.7rem;
+}
+.is-ltr .cc-passcode__verifying {
+  padding-left: 0.7rem;
+}
+.cc-passcode__form-message-wrapper {
+  margin-top: -0.2rem;
+}
+.is-rtl .cc-passcode__form-message-wrapper {
+  text-align: right;
+}
+.is-ltr .cc-passcode__form-message-wrapper {
+  text-align: left;
+}
+.is-rtl .cc-passcode__form-message {
+  margin-right: 0;
+}
+.is-ltr .cc-passcode__form-message {
+  margin-left: 0;
+}
+.cc-passcode.is-error .cc-passcode__digit {
+  border-color: #de071c;
+  background-color: rgba(222, 7, 28, 0.3);
+  -webkit-animation: shake 0.5s ease both;
+  animation: shake 0.5s ease both;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.cc-passcode.is-error .cc-passcode__digit:before {
+  -webkit-animation: none;
+  animation: none;
+  opacity: 1;
+}
+.cc-passcode.is-error .cc-passcode__digit--filled:before {
+  background-color: #de071c;
+  -webkit-animation: none;
+  animation: none;
+  opacity: 1;
+}
+.theme-dark .cc-passcode.is-error .cc-passcode__digit {
+  border-color: #f33;
+  background-color: rgba(255, 51, 51, 0.3);
+}
+.theme-dark .cc-passcode.is-error .cc-passcode__digit--filled:before {
+  background-color: #f33;
+}
+@-webkit-keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes cursor-blink {
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes cursor-blink {
+  50% {
+    opacity: 1;
+  }
+}
+.theme-dark .verify-code-form__sublabel[data-v-42b1d33a] {
+  color: #999;
+}
+.verify-code-form__passcode-input[data-v-42b1d33a] {
+  text-align: center;
+}
+.is-ltr .verify-code-form__passcode-input[data-v-42b1d33a],
+.is-rtl .verify-code-form__passcode-input[data-v-42b1d33a] {
+  padding: 1.5rem 0 1rem 0;
+}
+.verify-code-form__footer[data-v-42b1d33a] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+.verify-code-form__verifying[data-v-42b1d33a] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.is-rtl .verify-code-form__verifying-label[data-v-42b1d33a] {
+  margin-right: 0.5rem;
+}
+.is-ltr .verify-code-form__verifying-label[data-v-42b1d33a] {
+  margin-left: 0.5rem;
+}
+.verify-code-form__divider[data-v-42b1d33a] {
+  padding: 0 0.5rem;
+  color: #86868b;
+}
+.verify-code-form__input[data-v-42b1d33a] {
+  margin-bottom: 1.5rem;
+}
+.verify-code-form__sublabel[data-v-42b1d33a] {
+  text-align: center;
+}
+
+.web-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+}
+.web-button--rectangle {
+  border-radius: 8px;
+}
+.web-button--loading .web-button__spinner--cover {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.theme-dark
+  .web-button--loading
+  .web-button__spinner--cover
+  + .web-button__text--hide,
+.web-button--loading .web-button__spinner--cover + .web-button__text--hide {
+  color: transparent;
+}
+.theme-music.theme-dark .web-button--primary,
+.theme-music.theme-dark .web-button--primary:disabled,
+.theme-music.theme-dark .web-button--primary:disabled:hover,
+.theme-music.theme-dark .web-button--primary:hover,
+.theme-music .web-button--primary,
+.theme-music .web-button--primary:disabled,
+.theme-music .web-button--primary:disabled:hover,
+.theme-music .web-button--primary:hover {
+  background: #da0f47;
+  border-color: #da0f47;
+}
+.theme-podcastsconnect .button,
+.theme-podcastsconnect .button:disabled,
+.theme-podcastsconnect .button:disabled:hover,
+.theme-podcastsconnect .button:hover,
+.theme-podcastsconnect.theme-dark .button,
+.theme-podcastsconnect.theme-dark .button:disabled,
+.theme-podcastsconnect.theme-dark .button:disabled:hover,
+.theme-podcastsconnect.theme-dark .button:hover {
+  background: #7d50df;
+  border-color: #7d50df;
+}
+.web-button-form {
+  position: relative;
+}
+.web-button-form--rectangle.button {
+  border-radius: 8px;
+}
+.web-button-form__loading-spinner {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.theme-dark .web-button-form__loading-spinner + .web-button-form__text--hide,
+.web-button-form__loading-spinner + .web-button-form__text--hide {
+  color: transparent;
+}
+.theme-music.theme-dark .web-button-form--primary,
+.theme-music.theme-dark .web-button-form--primary:disabled,
+.theme-music.theme-dark .web-button-form--primary:disabled:hover,
+.theme-music.theme-dark .web-button-form--primary:hover,
+.theme-music .web-button-form--primary,
+.theme-music .web-button-form--primary:disabled,
+.theme-music .web-button-form--primary:disabled:hover,
+.theme-music .web-button-form--primary:hover {
+  background: #da0f47;
+  border-color: #da0f47;
+}
+.theme-podcastsconnect.theme-dark .web-button-form,
+.theme-podcastsconnect.theme-dark .web-button-form:disabled,
+.theme-podcastsconnect.theme-dark .web-button-form:disabled:hover,
+.theme-podcastsconnect.theme-dark .web-button-form:hover,
+.theme-podcastsconnect .web-button-form,
+.theme-podcastsconnect .web-button-form:disabled,
+.theme-podcastsconnect .web-button-form:disabled:hover,
+.theme-podcastsconnect .web-button-form:hover {
+  background: #7d50df;
+  border-color: #7d50df;
+}
+.theme-podcastsconnect .button-secondary {
+  color: #fff;
+}
+.form-buttons-modal[data-v-348e8e32] {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  padding: 10px 20px;
+}
+.form-buttons-inline[data-v-348e8e32],
+.form-buttons-modal[data-v-348e8e32] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.form-buttons-inline__back[data-v-348e8e32],
+.form-buttons-inline__continue[data-v-348e8e32] {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+.is-rtl
+  .form-buttons-inline__button
+  + .form-buttons-inline__button[data-v-348e8e32],
+.is-rtl
+  .form-buttons-modal__button
+  + .form-buttons-modal__button[data-v-348e8e32] {
+  margin-right: 0.5rem;
+}
+.is-ltr
+  .form-buttons-inline__button
+  + .form-buttons-inline__button[data-v-348e8e32],
+.is-ltr
+  .form-buttons-modal__button
+  + .form-buttons-modal__button[data-v-348e8e32] {
+  margin-left: 0.5rem;
+}
+.fin-form__errors[data-v-5a04f8ba] {
+  margin-bottom: 1rem;
+}
